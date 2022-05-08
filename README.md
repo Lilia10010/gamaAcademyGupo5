@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="name" src=".github/name.png" width="100%">
+  <h1>Finder</h1>
 </p>
 
 ## 🚀 Tecnologias
