@@ -1,6 +1,4 @@
-<p align="center">
-  <h1>Finder</h1>
-</p>
+  <h1 align="center">Finder</h1>
 
 ## 🚀 Tecnologias
 
