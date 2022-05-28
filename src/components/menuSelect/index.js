@@ -1,6 +1,9 @@
 import lupaPesquisar from "../../img/icons/lupaPesquisar.png";
 import barraVerticalMenu from "../../img/icons/barraVerticalMenu.png";
 import estrelaMarca from "../../img/icons/estrelaMarca.png";
+import modeloCarro from "../../img/icons/modeloCarro.png";
+import tipoCarro from "../../img/icons/tipoCarro.png";
+import local from "../../img/icons/local.png";
 import "../../css/menuSelect.css";
 
 const menuSelect = `
@@ -18,6 +21,22 @@ const menuSelect = `
 <select id="selectMarca">
 <option>Marca</option>
 </select>
+<img src="${barraVerticalMenu}"/>
+<img id="modeloCarro"src="${modeloCarro}"/>
+<select id="selectModelo">
+<option>Modelo</option>
+</select>
+<img src="${barraVerticalMenu}"/>
+<img id="tipoCarro"src="${tipoCarro}"/>
+<select id="selectTipo">
+<option>Tipo</option>
+</select>
+<img src="${barraVerticalMenu}"/>
+<img id="local"src="${local}"/>
+<select id="selectLocal">
+<option>Local</option>
+</select>
+<button id="botaoPesquisar">Pesquisar</button>
 </div>
 </div>
 `;
