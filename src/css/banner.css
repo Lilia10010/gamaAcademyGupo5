@@ -1,19 +1,19 @@
 .containerBanner {
   display: flex;
+  padding: 0% 10%;
 }
 #imagemFundo {
   position: absolute;
-  max-width: 100%;
+  width: 100%;
 }
-.conteudoBanner {
-  margin-top: 20vh;
-}
+
 #carroBanner {
   position: relative;
-  width: 100%;
-  max-width: 40%;
-  margin-top: 30vh;
-  margin-left: 8vw;
+  width: 746px;
+  height: 416px;
+  margin-top: 20vh;
+  margin-left: auto;
+  margin-right: 3vw;
 }
 #tituloBanner {
   position: relative;
@@ -22,7 +22,8 @@
   font-weight: 700;
   font-size: 46px;
   line-height: 130%;
-  margin-left: 7vw;
+  margin-left: 4vw;
+  margin-top: 20vh;
 
   color: #ffffff;
 }
@@ -33,8 +34,24 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  margin-left: 7vw;
+  margin-left: 4vw;
 
   color: #ffffff;
   opacity: 0.7;
+}
+
+@media screen and (max-width: 1280px) {
+  .containerBanner {
+    padding: 0% 2%;
+  }
+  #carroBanner {
+    margin-top: 24vh;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  #carroBanner {
+    width: 100%;
+    max-width: 60%;
+  }
 }
