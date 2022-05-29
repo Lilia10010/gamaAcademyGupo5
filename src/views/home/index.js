@@ -1,16 +1,15 @@
 import nav from "../../components/nav";
 import footer from "../../components/footer";
+import banner from "../../components/banner";
+import menuSelect from "../../components/menuSelect";
 
 let Home = {
   render: async () => {
     let view = `
     <div class="container">
     ${nav}
-
-    <div>
-    <h1>Inserir componentes aqui!!!</h1>
-    </div>
-
+    ${banner}
+    ${menuSelect}
     ${footer}
     </div>`;
 

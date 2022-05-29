@@ -1,9 +1,10 @@
 .conteudo-navbar {
   display: flex;
+  position: absolute;
   width: 100%;
   padding: 22px 0px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 #conteudo-logo {
   display: flex;
