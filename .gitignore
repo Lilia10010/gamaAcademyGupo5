@@ -1,2 +1,16 @@
 node_modules
 dist
+*.local
+
+# vscode
+/.vscode/
+
+# debug
+npm-debug.log*
+npm-debug.log*
+npm-error.log*
+
+# Logs
+logs
+*.log
+
