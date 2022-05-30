@@ -3,6 +3,8 @@
 @import "../css/banner.css";
 @import "../css/menuSelect.css";
 
+
+@import "../css/filtersProducts.css";
 body {
   margin: 0px;
   padding: 0px;
