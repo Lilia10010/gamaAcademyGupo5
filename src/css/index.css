@@ -4,6 +4,8 @@
 @import "../css/menuSelect.css";
 @import "./navbar.css";
 @import "./offers.css";
+@import "./filtersRightCatalog.css";
+@import "./filtersLeftCatalog.css";
 
 :root {
   --white: #ffffff;
@@ -24,8 +26,7 @@
   --gray-200: #f5f4f8;
 }
 
-@import "./filtersRightCatalog.css";
-@import "./filtersLeftCatalog.css";
+
 
 
 body {
