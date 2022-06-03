@@ -1,4 +1,5 @@
 import nav from "../../components/nav";
+import brand from "../../components/brand";
 import footer from "../../components/footer";
 
 let Home = {
@@ -10,6 +11,7 @@ let Home = {
     <div>
     <h1>Inserir componentes aqui!!!</h1>
     </div>
+    <section>${brand}</section>
 
     ${footer}
     </div>`;
