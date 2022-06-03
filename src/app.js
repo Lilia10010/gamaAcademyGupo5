@@ -2,9 +2,11 @@ import Utils from "./service/Utils";
 
 import Home from "./views/home";
 import ErrorPage from "./views/error";
+import Catalogo from "./views/catalogo";
 
 let routes = {
   "/": Home,
+  '/catalogo' : Catalogo
 };
 
 const router = async () => {
@@ -20,6 +22,7 @@ const router = async () => {
   app.innerHTML = await page.render();
   await page.after_render();
 };
+
 
 window.addEventListener("hashchange", router);
 
