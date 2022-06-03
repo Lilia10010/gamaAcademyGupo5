@@ -24,6 +24,10 @@
   --gray-200: #f5f4f8;
 }
 
+@import "./filtersRightCatalog.css";
+@import "./filtersLeftCatalog.css";
+
+
 body {
   margin: 0px;
   padding: 0px;
