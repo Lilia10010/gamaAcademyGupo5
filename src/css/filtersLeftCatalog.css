@@ -1,30 +1,41 @@
-.wrapper-filter-products {
+/* start confg page catalog */
+ .container-catalog {
   display: flex;
   justify-content: center;
   color: #fff;
-
   padding-top: 100px;
-}
-
-.container-products {
+} 
+.container-catalog > div {
   display: flex;
   max-width: 1296px;
   width: 100%;
   justify-content: space-between;
   margin: 10px;
 }
+
+@media (max-width: 768px)
+{
+   .container-catalog > div
+   {
+     flex-direction: column;
+   }
+}
+/* and confg page catalog NAO É PRA FICAR AQUI */
+
+
+
 .container-left {
   max-width: 290px;
   width: 100%;
   /*  background: rgba(40, 35, 58, 0.596); */
 }
 
-.container-right {
+/* .container-right {
   max-width: 966px;
   width: 100%;
   background: rgba(40, 35, 58, 0.596);
   margin-left: 16px;
-}
+} */
 
 .container-novo-usado {
   display: flex;
@@ -87,6 +98,11 @@ label input:hover ~ span {
 /*custom check box */
 .checkbox-tipo {
   margin-bottom: 32px;
+}
+.checkbox-tipo label
+{
+  display: flex;
+  align-items: center;
 }
 .checkbox-tipo input[type="checkbox"] {
   display: none;

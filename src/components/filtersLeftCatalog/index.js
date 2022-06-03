@@ -1,7 +1,7 @@
-import "../../css/filtersProducts.css";
-let filtersProducts = `
+import "../../css/filtersLeftCatalog.css";
+let filtersLeftCatalog = `
   <section class="wrapper-filter-products">
-    <div class="container-products">
+   
       <div class="container-left">
 
       <div class="container-novo-usado">      
@@ -162,43 +162,39 @@ let filtersProducts = `
       </div>
 
        <div class="title-filtro checkbox-tipo">
-        <span>Cor</span>
-        <div class="container-checkbox-tipo">
-          <input type="checkbox" id="preto-cor" value="preto" name="cor" />
-          <label for="preto-cor" class="checkbox">Preto</label>
+          <span>Cor</span>
+          <div class="container-checkbox-tipo">
+            <input type="checkbox" id="preto-cor" value="preto" name="cor" />
+            <label for="preto-cor" class="checkbox">Preto</label>
 
-          <input type="checkbox" id="azul-cor" value="azul" name="cor" />
-          <label for="azul-cor" class="checkbox">Azul</label>
+            <input type="checkbox" id="azul-cor" value="azul" name="cor" />
+            <label for="azul-cor" class="checkbox">Azul</label>
 
-          <input type="checkbox" id="Marrom-cor" value="marrom" name="cor" />
-          <label for="Marrom-cor" class="checkbox">Marrom</label>
+            <input type="checkbox" id="Marrom-cor" value="marrom" name="cor" />
+            <label for="Marrom-cor" class="checkbox">Marrom</label>
 
-          <input type="checkbox" id="dourado-cor" value="dourado" name="cor" />
-          <label for="dourado-cor" class="checkbox">Dourado</label>
+            <input type="checkbox" id="dourado-cor" value="dourado" name="cor" />
+            <label for="dourado-cor" class="checkbox">Dourado</label>
 
-          <input type="checkbox" id="prata-cor" value="prata" name="cor" />
-          <label for="prata-cor" class="checkbox">Prata</label>
+            <input type="checkbox" id="prata-cor" value="prata" name="cor" />
+            <label for="prata-cor" class="checkbox">Prata</label>
 
-          <input type="checkbox" id="amarelo-cor" value="amarelo" name="cor" />
-          <label for="amarelo-cor" class="checkbox">Amarelo</label>
+            <input type="checkbox" id="amarelo-cor" value="amarelo" name="cor" />
+            <label for="amarelo-cor" class="checkbox">Amarelo</label>
 
-          <input type="checkbox" id="1other-cor" value="1other-cor" name="cor" />
-          <label for="1other-cor" class="checkbox">1 - other</label>
+            <input type="checkbox" id="1other-cor" value="1other-cor" name="cor" />
+            <label for="1other-cor" class="checkbox">1 - other</label>
 
-          <input type="checkbox" id="2other-cor" value="2other-cor" name="cor" />
-          <label for="2other-cor" class="checkbox">2 - other</label>
+            <input type="checkbox" id="2other-cor" value="2other-cor" name="cor" />
+            <label for="2other-cor" class="checkbox">2 - other</label>
 
-          <input type="checkbox" id="3other-cor" value="3other-cor" name="cor" />
-          <label for="3other-cor" class="checkbox">3 - other</label>
+            <input type="checkbox" id="3other-cor" value="3other-cor" name="cor" />
+            <label for="3other-cor" class="checkbox">3 - other</label>
+          </div>
         </div>
+              
       </div>
-      
-      </div>
-      
-      <div class="container-right">
-      <h1>container right</h1>
-      </div>
-    </div>
+   
   </section>`;
 
-export default filtersProducts;
+export default filtersLeftCatalog;
