@@ -3,6 +3,7 @@ import footer from "../../components/footer";
 import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
+import downloadApp from "../../components/downloadApp";
 
 let idx = 0;
 let idx2 = 0;
@@ -17,6 +18,7 @@ let Home = {
     ${banner}
     ${menuSelect}        
     ${Offers}
+    ${downloadApp}
     ${footer}
     </div>`;
 

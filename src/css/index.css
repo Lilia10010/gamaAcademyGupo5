@@ -7,6 +7,8 @@
 @import "./filtersRightCatalog.css";
 @import "./filtersLeftCatalog.css";
 
+@import "./downloadApp.css";
+
 :root {
   --white: #ffffff;
   --primary: #fd5631;
