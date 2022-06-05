@@ -82,18 +82,19 @@ form{
 }
 
 .icones{
-    margin-top: 35px;
+    margin-top: 20px;
+    display: flex;
 }
 
-.icones a{
-    margin: 1px;
+.icones p{
+    margin-left: 5px;
     padding: 10px;
     border-radius: 45px;
     background:linear-gradient(0deg, rgba(69, 64, 86, 0.2), rgba(69, 64, 86, 0.2)), #1f1b2d00;
 }
 
 #messeger{
-    margin: 2px;
+    margin-left: 4px;
     padding: 10px;
     border-radius: 45px;
     background: white;

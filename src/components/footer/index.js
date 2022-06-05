@@ -43,7 +43,7 @@ let footer = `<footer>
               <li><a href="#">Loren ipsun</a></li>
           </ul>
       </li>
-      <li class="features">
+      <li>
           <h2 class="titulo-lista">Sobre</h2>
           <ul class="box">
               <li><a href="#">Loren ipsun</a></li>
@@ -65,16 +65,16 @@ let footer = `<footer>
       <li class="contato">
         <ul>
           <div class="phone">
-          <a class="phone"><img src="${Telefone}"/>(11) 1111-1111</a>
+          <p class="phone"><img src="${Telefone}"/>(11) 1111-1111</p>
           </div>
           <div class="email">
-          <a href="#"><img src="${Email}"/>email@finder.com.br</a>
+          <p href="#"><img src="${Email}"/>email@finder.com.br</p>
           </div>
           <div class="icones">
-            <a href="#"><img src="${Face}"/></a>
-            <a href="#"><img src="${Twitter}"/></a>
-            <a href="#"><img src="${Telegram}"/></a>
-            <a id="messeger" href="#"><img src="${Messeger}"/></a>
+            <p href="#"><img src="${Face}"/></p>
+            <p href="#"><img src="${Twitter}"/></p>
+            <p href="#"><img src="${Telegram}"/></p>
+            <p id="messeger" href="#"><img src="${Messeger}"/></p>
           </div>
         </ul>
       </li>
