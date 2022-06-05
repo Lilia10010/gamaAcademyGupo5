@@ -10,11 +10,13 @@ let Catalogo = {
     ${nav}
 
     <div class="container-catalog">
-      <div>
+      <div class="container-left-right">
         ${filtersLeftCatalog}
         ${filtersRightCatalog}
       </div>
+
     </div>
+
 
     ${footer}
     </div>`
