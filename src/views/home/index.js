@@ -3,11 +3,11 @@ import footer from "../../components/footer";
 import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
+import lastPublish from "../../components/lastPublish";
 
 let idx = 0;
 let idx2 = 0;
 let idx3 = 0;
-
 
 let Home = {
   render: async () => {
@@ -17,6 +17,7 @@ let Home = {
     ${banner}
     ${menuSelect}        
     ${Offers}
+    ${lastPublish}
     ${footer}
     </div>`;
 
@@ -78,7 +79,7 @@ let Home = {
     chevronRight3.addEventListener("click", () => {
       idx3++;
 
-      if (idx3> img3.length - 1) {
+      if (idx3 > img3.length - 1) {
         idx3 = 0;
       }
 
