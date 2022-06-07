@@ -9,7 +9,7 @@ import downloadApp from "../../components/downloadApp";
 
 import imagemFundo from "../../img/ilustracoes/shape.png";
 
->
+
 
 let idx = 0;
 let idx2 = 0;
