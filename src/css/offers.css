@@ -337,6 +337,10 @@ h1, h2, h3, h4, h5, h6, a, p, span {
   border: 1px solid transparent;
 }
 
+.otherCarsCard:last-child {
+  margin-top: 22px;
+}
+
 .otherCarsCard:hover {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.15);
