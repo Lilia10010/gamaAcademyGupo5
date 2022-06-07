@@ -8,6 +8,7 @@
 @import "./filtersRightCatalog.css";
 @import "./filtersLeftCatalog.css";
 @import "./footer.css";
+@import "./ultimasNovidades.css";
 
 :root {
   --white: #ffffff;
