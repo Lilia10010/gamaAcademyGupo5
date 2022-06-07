@@ -3,7 +3,8 @@
   width: 100%;
   padding: 22px 0px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  z-index: 1;
 }
 #conteudo-logo {
   display: flex;
@@ -33,7 +34,6 @@
 }
 a {
   text-decoration: none;
-  text-decoration-style: none;
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 700;
@@ -41,6 +41,7 @@ a {
 
   color: #ffffff;
   opacity: 0.7;
+  cursor: pointer;
 }
 #botao-entrar {
   font-family: "Noto Sans";
