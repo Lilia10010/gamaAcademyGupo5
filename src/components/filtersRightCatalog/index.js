@@ -1,18 +1,56 @@
 import "../../css/filtersRightCatalog.css"
-import imageCardCarro from "../../img/carro-verde01.jpg"
+import cardGroup from './cardGroup'
+
+import ordenarIcon from "../../img/icons/svg/ordenar-icon.svg"
+import carIcon from "../../img/icons/svg/car.svg"
+import listIcon from "../../img/icons/svg/list.svg"
+import gridIcon from "../../img/icons/svg/grid-icon.svg"
+
+import switchHorizontal from "../../img/icons/svg/switch-horizontal.png"
+import barraVertical from "../../img/icons/barraVerticalMenu.png"
 
 
 let filtersRightCatalog = `
-  <section class="wrapper-filter-products">
-
+  <section class="section-continer-header-catalog">
     <div class="continer-header-catalog">
       <div><span class="opacity">Home ></span> <span>Carros usados</span></div>
 
-      <div class="title"><h3>Carros usados</h3><div>249 offers</div></div>
+      <div class="title">
+        <h3>Carros usados</h3>
+        <div class="continer-header-catalog-right">
+          <img src="${carIcon}" alt="arrow comparar" />       
+          <div>249 offers</div>
+        </div>
+      </div>
 
-      <div class="filter-header-catalog">
-        <div> <div>= Ordernar por: select | icon comparar</div></div> 
-        <div>left</div>
+      <div class="filter-header-catalog-left">
+      
+          <div class="container-select-ordenacao">  
+            <img src="${ordenarIcon}" alt="icon de ordenacao" /> 
+            Ordernar por:  
+
+            <div class="title-filtro select-localizacao">              
+              <div class="custom-dropdown">
+                <select>
+                    <option>Mais novos</option>
+                    <option>novo 01</option>
+                    <option>novo 02</option>
+                    <option>novo 03</option>
+                </select>
+              </div>
+            </div>
+            
+            <img src="${barraVertical}" alt="arrow comparar" /> 
+            <img src="${switchHorizontal}" alt="arrow comparar" /> 
+             <span class="comprar">comparar (0)</span>
+          </div>
+        
+        <div class="filter-header-catalog-rigth">
+
+          <img src="${listIcon}" alt="icone dois traços" />
+          <img src="${gridIcon}" alt="icone dois traços" />
+        
+        </div>
       </div>
     </div>
 
@@ -20,98 +58,66 @@ let filtersRightCatalog = `
 
 
     <div class="wrapper-catalog"> 
-    
-      <div class="card-container">
-        <div class="card-top">
-          <img src="${imageCardCarro}" alt="carro verde" />
-          <div class="tag">tag</div>
-        </div>
 
-        <div class="card-bottom">
-          <div class="ano">
-            <span>1995</span>
-            <div class="container-checkbox-tipo">
-              <input type="checkbox" id="compare" value="compareid" name="compare" />
-              <label for="compare" class="checkbox">Sedan</label>
-          </div>
-        </div>
-
-          <div class="info-primary">
-            <p>Ford Truck Lifted<p>
-            <span>$24,000<span>
-            <div>icon Chicago</div>
-        </div>
-
-        <div class="info-secondary"> 
-          <div>
-            <div>icon</div>
-            <div>247k mi</div>        
-          </div>
-
-          <div>
-            <div>icon</div>
-            <div>247k mi</div>        
-          </div>
-
-          <div>
-            <div>icon</div>
-            <div>247k mi</div>        
-          </div>
-        </div>
-      </div>
-
+      <div class="wrapper-catalog-card">
+        ${cardGroup}
+        ${cardGroup}
+        ${cardGroup}
+        ${cardGroup}
+        ${cardGroup}
+        ${cardGroup}
       </div>
 
 
+    
 
 
+       <div class="filter-header-catalog-left">
+      
+          <div class="container-select-ordenacao">  
+            <img src="${ordenarIcon}" alt="icon de ordenacao" /> 
+            Sort by  
 
-      <div class="card-container">
-        <div class="card-top">
-          <img src="${imageCardCarro}" alt="carro verde" />
-          <div class="tag">tag</div>
-        </div>
-
-        <div class="card-bottom">
-          <div class="ano">
-            <span>1995</span>
-            <div class="container-checkbox-tipo">
-              <input type="checkbox" id="compare" value="compareid" name="compare" />
-              <label for="compare" class="checkbox">Sedan</label>
+            <div class="title-filtro select-localizacao">              
+              <div class="custom-dropdown">
+                <select>
+                    <option>Newest</option>
+                    <option>novo 01</option>
+                    <option>novo 02</option>
+                    <option>novo 03</option>
+                </select>
+              </div>
+            </div>
+            
+            <img src="${barraVertical}" alt="arrow comparar" /> 
+            <img src="${switchHorizontal}" alt="arrow comparar" /> 
+             <span class="comprar">comparar (0)</span>
           </div>
-        </div>
+        
+        <div class="filter-header-catalog-rigth">
+          
+          <svg width="200" height="24" viewBox="0 0 200 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M10.4713 7.52861C10.7317 7.78896 10.7317 8.21107 10.4713 8.47141L6.94273 12L10.4713 15.5286C10.7317 15.789 10.7317 16.2111 10.4713 16.4714C10.211 16.7318 9.78886 16.7318 9.52851 16.4714L5.52851 12.4714C5.26816 12.2111 5.26816 11.789 5.52851 11.5286L9.52851 7.52861C9.78886 7.26826 10.211 7.26826 10.4713 7.52861Z" fill="white"/>
+            <circle cx="36" cy="12" r="12" fill="white"/>
+            <path d="M38.0299 18H35.6139V11.392C35.6139 11.2107 35.6139 10.9867 35.6139 10.72C35.6245 10.4533 35.6352 10.176 35.6459 9.888C35.6565 9.6 35.6672 9.344 35.6779 9.12C35.6245 9.184 35.5072 9.30133 35.3259 9.472C35.1552 9.632 34.9952 9.776 34.8459 9.904L33.5339 10.96L32.3659 9.504L36.0459 6.576H38.0299V18Z" fill="#FD5631"/>
+            <path opacity="0.7" d="M71.7419 18H64.1899V16.832L67.1819 13.808C67.7579 13.232 68.2432 12.72 68.6379 12.272C69.0325 11.824 69.3312 11.3867 69.5339 10.96C69.7365 10.5227 69.8379 10.048 69.8379 9.536C69.8379 8.90667 69.6512 8.432 69.2779 8.112C68.9045 7.78133 68.4192 7.616 67.8219 7.616C67.2672 7.616 66.7765 7.712 66.3499 7.904C65.9339 8.096 65.5072 8.36267 65.0699 8.704L64.3179 7.76C64.6165 7.504 64.9419 7.27467 65.2939 7.072C65.6565 6.86933 66.0459 6.70933 66.4619 6.592C66.8885 6.47467 67.3419 6.416 67.8219 6.416C68.5365 6.416 69.1499 6.53867 69.6619 6.784C70.1739 7.02933 70.5685 7.38133 70.8459 7.84C71.1339 8.288 71.2779 8.82667 71.2779 9.456C71.2779 9.904 71.2085 10.3307 71.0699 10.736C70.9312 11.1307 70.7339 11.52 70.4779 11.904C70.2219 12.288 69.9125 12.6773 69.5499 13.072C69.1872 13.4667 68.7872 13.8773 68.3499 14.304L65.9659 16.656V16.72H71.7419V18Z" fill="white"/>
+            <path opacity="0.7" d="M103.31 9.248C103.31 10.016 103.097 10.6293 102.67 11.088C102.243 11.536 101.667 11.8347 100.942 11.984V12.048C101.859 12.1547 102.542 12.4427 102.99 12.912C103.438 13.3813 103.662 13.9947 103.662 14.752C103.662 15.4133 103.507 16.0053 103.198 16.528C102.889 17.04 102.409 17.44 101.758 17.728C101.118 18.016 100.291 18.16 99.2779 18.16C98.6805 18.16 98.1259 18.112 97.6139 18.016C97.1019 17.9307 96.6112 17.7707 96.1419 17.536V16.224C96.6219 16.4587 97.1392 16.6453 97.6939 16.784C98.2485 16.912 98.7819 16.976 99.2939 16.976C100.318 16.976 101.054 16.7787 101.502 16.384C101.961 15.9787 102.19 15.424 102.19 14.72C102.19 14.0053 101.907 13.4933 101.342 13.184C100.787 12.864 100.003 12.704 98.9899 12.704H97.8859V11.504H99.0059C99.9445 11.504 100.654 11.3067 101.134 10.912C101.625 10.5173 101.87 9.99467 101.87 9.344C101.87 8.78933 101.683 8.36267 101.31 8.064C100.937 7.75467 100.43 7.6 99.7899 7.6C99.1712 7.6 98.6432 7.69067 98.2059 7.872C97.7685 8.05333 97.3365 8.28267 96.9099 8.56L96.2059 7.6C96.6112 7.28 97.1125 7.00267 97.7099 6.768C98.3179 6.53333 99.0059 6.416 99.7739 6.416C100.969 6.416 101.854 6.68267 102.43 7.216C103.017 7.74933 103.31 8.42667 103.31 9.248Z" fill="white"/>
+            <path opacity="0.7" d="M126.73 17.136C126.73 16.7413 126.826 16.464 127.018 16.304C127.21 16.144 127.439 16.064 127.706 16.064C127.983 16.064 128.218 16.144 128.41 16.304C128.613 16.464 128.714 16.7413 128.714 17.136C128.714 17.52 128.613 17.7973 128.41 17.968C128.218 18.1387 127.983 18.224 127.706 18.224C127.439 18.224 127.21 18.1387 127.018 17.968C126.826 17.7973 126.73 17.52 126.73 17.136ZM131.011 17.136C131.011 16.7413 131.107 16.464 131.299 16.304C131.491 16.144 131.721 16.064 131.987 16.064C132.265 16.064 132.499 16.144 132.691 16.304C132.894 16.464 132.995 16.7413 132.995 17.136C132.995 17.52 132.894 17.7973 132.691 17.968C132.499 18.1387 132.265 18.224 131.987 18.224C131.721 18.224 131.491 18.1387 131.299 17.968C131.107 17.7973 131.011 17.52 131.011 17.136ZM135.293 17.136C135.293 16.7413 135.389 16.464 135.581 16.304C135.773 16.144 136.002 16.064 136.269 16.064C136.546 16.064 136.781 16.144 136.973 16.304C137.175 16.464 137.277 16.7413 137.277 17.136C137.277 17.52 137.175 17.7973 136.973 17.968C136.781 18.1387 136.546 18.224 136.269 18.224C136.002 18.224 135.773 18.1387 135.581 17.968C135.389 17.7973 135.293 17.52 135.293 17.136Z" fill="white"/>
+            <path opacity="0.7" d="M163.982 6.416C164.654 6.416 165.246 6.52267 165.758 6.736C166.27 6.93867 166.67 7.24267 166.958 7.648C167.257 8.05333 167.406 8.55467 167.406 9.152C167.406 9.61067 167.305 10.0107 167.102 10.352C166.91 10.6933 166.649 10.9973 166.318 11.264C165.987 11.52 165.625 11.7493 165.23 11.952C165.699 12.176 166.126 12.432 166.51 12.72C166.894 12.9973 167.198 13.3227 167.422 13.696C167.657 14.0693 167.774 14.5173 167.774 15.04C167.774 15.68 167.619 16.2347 167.31 16.704C167.001 17.1627 166.563 17.52 165.998 17.776C165.443 18.032 164.787 18.16 164.03 18.16C163.209 18.16 162.51 18.0373 161.934 17.792C161.369 17.5467 160.937 17.2 160.638 16.752C160.35 16.2933 160.206 15.7387 160.206 15.088C160.206 14.5653 160.313 14.112 160.526 13.728C160.75 13.344 161.043 13.0133 161.406 12.736C161.769 12.4587 162.158 12.224 162.574 12.032C162.201 11.8187 161.859 11.5787 161.55 11.312C161.251 11.0347 161.011 10.72 160.83 10.368C160.659 10.016 160.574 9.60533 160.574 9.136C160.574 8.54933 160.723 8.05867 161.022 7.664C161.321 7.25867 161.726 6.94933 162.238 6.736C162.75 6.52267 163.331 6.416 163.982 6.416ZM161.582 15.104C161.582 15.6587 161.779 16.1227 162.174 16.496C162.569 16.8587 163.177 17.04 163.998 17.04C164.521 17.04 164.958 16.9547 165.31 16.784C165.662 16.6133 165.929 16.3787 166.11 16.08C166.302 15.7813 166.398 15.44 166.398 15.056C166.398 14.6827 166.297 14.3573 166.094 14.08C165.902 13.792 165.625 13.536 165.262 13.312C164.91 13.088 164.489 12.8853 163.998 12.704L163.742 12.608C163.273 12.8107 162.878 13.0293 162.558 13.264C162.238 13.4987 161.993 13.7653 161.822 14.064C161.662 14.3627 161.582 14.7093 161.582 15.104ZM163.966 7.552C163.379 7.552 162.894 7.696 162.51 7.984C162.137 8.26133 161.95 8.66667 161.95 9.2C161.95 9.59467 162.041 9.92533 162.222 10.192C162.414 10.4587 162.67 10.688 162.99 10.88C163.31 11.0613 163.662 11.2373 164.046 11.408C164.419 11.248 164.75 11.072 165.038 10.88C165.337 10.688 165.571 10.4587 165.742 10.192C165.923 9.91467 166.014 9.584 166.014 9.2C166.014 8.66667 165.827 8.26133 165.454 7.984C165.081 7.696 164.585 7.552 163.966 7.552Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M189.529 7.52861C189.789 7.26826 190.211 7.26826 190.471 7.52861L194.471 11.5286C194.732 11.789 194.732 12.2111 194.471 12.4714L190.471 16.4714C190.211 16.7318 189.789 16.7318 189.529 16.4714C189.268 16.2111 189.268 15.789 189.529 15.5286L193.057 12L189.529 8.47141C189.268 8.21107 189.268 7.78896 189.529 7.52861Z" fill="white"/>
+          </svg>
 
-          <div class="info-primary">
-            <p>Ford Truck Lifted<p>
-            <span>$24,000<span>
-            <div>icon Chicago</div>
-        </div>
-
-        <div class="info-secondary"> 
-          <div>
-            <div>icon</div>
-            <div>247k mi</div>        
-          </div>
-
-          <div>
-            <div>icon</div>
-            <div>247k mi</div>        
-          </div>
-
-          <div>
-            <div>icon</div>
-            <div>247k mi</div>        
-          </div>
+        
         </div>
       </div>
 
-    
-    
-    
-    
-    
-    
+
       </div>
+      
+
+
+
+      
 
       
   </section>`;
