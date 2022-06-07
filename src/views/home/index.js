@@ -4,6 +4,7 @@ import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
 import imagemFundo from "../../img/ilustracoes/shape.png";
+import features from "../../components/features";
 
 
 let idx = 0;
@@ -20,6 +21,7 @@ let Home = {
       ${banner}
       ${menuSelect}        
       ${Offers}
+      ${features}
       ${footer}
     </div>
     </div>`;
