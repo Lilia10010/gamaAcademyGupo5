@@ -1,25 +1,34 @@
 import nav from "../../components/nav";
+import brand from "../../components/brand";
 import footer from "../../components/footer";
 import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
+
 import downloadApp from "../../components/downloadApp";
+
+import imagemFundo from "../../img/ilustracoes/shape.png";
+
+>
 
 let idx = 0;
 let idx2 = 0;
 let idx3 = 0;
 
-
 let Home = {
   render: async () => {
     let view = `
-    <div class="container">
+      <div class="container">
+    <img id="imagemFundo" src="${imagemFundo}" />
+    <div class="content">
     ${nav}
     ${banner}
     ${menuSelect}        
     ${Offers}
+     ${brand}
     ${downloadApp}
     ${footer}
+    </div>
     </div>`;
 
     return view;
@@ -80,7 +89,7 @@ let Home = {
     chevronRight3.addEventListener("click", () => {
       idx3++;
 
-      if (idx3> img3.length - 1) {
+      if (idx3 > img3.length - 1) {
         idx3 = 0;
       }
 

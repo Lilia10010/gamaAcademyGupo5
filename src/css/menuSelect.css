@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 0% 14%;
+  width: 100%;
 }
 #botaoNovo {
   padding: 8px 16px;
@@ -60,7 +61,6 @@
 }
 #inputPesquisar {
   display: flex;
-
   justify-items: center;
   align-items: center;
 }
@@ -72,9 +72,10 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  margin-left: 9px;
 
   align-items: center;
-  background: rgba(255, 255, 255, 0.04);
+  background: transparent;
   border: none;
   color: #ffffff;
 }
@@ -91,12 +92,13 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  background: rgba(255, 255, 255, 0.04);
+  background: transparent;
 
   align-items: center;
   color: #ffffff;
   border: none;
   opacity: 0.5;
+  
 }
 
 #botaoPesquisar {
