@@ -1,4 +1,16 @@
-.brandSection{
+.brandSection,
+.brandList{
     display: flex;
-    padding: 0 10%;
+    width: inherit;
+
+}
+.brandList{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 48px 0;
+}
+.brandItem{
+    width: 86px;
+    height: 48px;
+
 }
