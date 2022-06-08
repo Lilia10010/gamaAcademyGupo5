@@ -16,7 +16,7 @@ let idx3 = 0;
 let Home = {
   render: async () => {
     let view = `
-      <div class="container">
+    <div class="container">
     <img id="imagemFundo" src="${imagemFundo}" />
     <div class="content">
     ${nav}
@@ -25,8 +25,8 @@ let Home = {
     ${Offers}
      ${brand}
     ${downloadApp}
-    ${footer}
     </div>
+    ${footer}
     </div>`;
 
     return view;
