@@ -1,6 +1,7 @@
 import nav from "../../components/nav";
 import brand from "../../components/brand";
 import footer from "../../components/footer";
+import UltimasNovidades from "../../components/ultimasNovidades";
 import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
@@ -23,8 +24,9 @@ let Home = {
     ${banner}
     ${menuSelect}        
     ${Offers}
-     ${brand}
+    ${brand}
     ${downloadApp}
+    ${UltimasNovidades}
     </div>
     ${footer}
     </div>`;
