@@ -7,8 +7,15 @@
 @import "./offers.css";
 @import "./filtersRightCatalog.css";
 @import "./filtersLeftCatalog.css";
+
+
+@import "./downloadApp.css";
+
 @import "./footer.css";
 @import "./ultimasNovidades.css";
+
+@import "./brand.css";
+
 
 :root {
   --white: #ffffff;
@@ -38,6 +45,12 @@ body {
   box-sizing: border-box;
 }
 
+ol,ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   background-color: #1f1b2d;
   display: flex;
@@ -52,4 +65,11 @@ body {
   align-items: center;
   width: 1296px;
   margin: 0 auto;
+}
+
+#imagemFundo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
 }
