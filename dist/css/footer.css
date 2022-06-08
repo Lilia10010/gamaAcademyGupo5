@@ -1,8 +1,13 @@
 footer{
+   
     width: 100%;
     bottom: 0;
     left: 0;
     background: linear-gradient(0deg, rgba(69, 64, 86, 0.2), rgba(69, 64, 86, 0.2)), #1F1B2D;
+}
+footer > div{
+     max-width: 1296px;
+     margin: 0 auto;
 }
 
 .container-footer{

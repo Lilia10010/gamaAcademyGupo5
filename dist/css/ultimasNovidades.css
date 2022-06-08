@@ -1,0 +1,51 @@
+.ultimas-novidades{
+    padding: 40px;
+}
+
+.titulo-novidades{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: #fff;
+}
+
+.ultimas-novidades h2{
+    margin-left: 13%;
+}
+
+.ultimas-novidades a{
+    margin-right: 13%;
+}
+
+.novidades{
+    display: flex;
+    justify-content: center;
+}
+
+.img-novidade{
+    margin: 15px;
+}
+
+.oferta p{
+    color: #FD5631;
+}
+
+.oferta h3{
+    color: #fff;
+    opacity: 0.75;
+}
+
+.usuario{
+    display: flex;
+    align-items: center;
+}
+
+.usuario p{
+    font-size: 13px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.calendario{
+    margin-left: 2px;
+}
