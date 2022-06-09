@@ -1,20 +1,14 @@
 .containerBanner {
   display: flex;
-  padding: 0% 10%;
-}
-#imagemFundo {
-  position: absolute;
+  justify-content: space-between;
+  padding-top: 7.875rem;
   width: 100%;
-  z-index: 0;
 }
 
 #carroBanner {
   position: relative;
   width: 746px;
   height: 416px;
-  margin-top: 20vh;
-  margin-left: auto;
-  margin-right: 3vw;
 }
 #tituloBanner {
   position: relative;
@@ -23,9 +17,7 @@
   font-weight: 700;
   font-size: 46px;
   line-height: 130%;
-  margin-left: 4vw;
-  margin-top: 20vh;
-
+  margin-top: -20px;
   color: #ffffff;
 }
 #subtituloBanner {
@@ -35,9 +27,8 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  margin-left: 4vw;
 
-  color: #ffffff;
+  color: var(--gray-700);
   opacity: 0.7;
 }
 
