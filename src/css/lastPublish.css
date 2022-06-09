@@ -73,8 +73,8 @@
   background: var(--warning);
   border-radius: 6px;
   z-index: 2;
-  margin-top: -30vh;
-  margin-bottom: 26vh;
+  margin-top: -190px;
+  margin-bottom: 160px;
   margin-left: 1vw;
 }
 #bordaUsado {
@@ -84,8 +84,8 @@
   background: var(--info);
   border-radius: 6px;
   z-index: 2;
-  margin-top: -30vh;
-  margin-bottom: 26vh;
+  margin-top: -190px;
+  margin-bottom: 160px;
   margin-left: 1vw;
 }
 #tituloNovo,
