@@ -48,6 +48,8 @@
   display: flex;
 }
 #cardPublish {
+  display: flex;
+  flex-direction: column;
   width: 416px;
   height: 480px;
   margin: 15px;
@@ -55,9 +57,46 @@
   border-radius: 12px;
 }
 #cardPublish img {
+  display: flex;
   width: 416px;
   height: 241px;
   border-radius: 12px 12px 0px 0px;
+}
+#imgMazda {
+  position: relative;
+  z-index: 0;
+}
+#bordaNovo {
+  padding: 1px 10px 2px;
+  width: 55px;
+  height: 24px;
+  background: var(--warning);
+  border-radius: 6px;
+  z-index: 2;
+  margin-top: -30vh;
+  margin-bottom: 26vh;
+  margin-left: 1vw;
+}
+#bordaUsado {
+  padding: 1px 10px 2px;
+  width: 55px;
+  height: 24px;
+  background: var(--info);
+  border-radius: 6px;
+  z-index: 2;
+  margin-top: -30vh;
+  margin-bottom: 26vh;
+  margin-left: 1vw;
+}
+#tituloNovo,
+#tituloUsado {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  width: 35px;
+  height: 21px;
+  margin: 3px 10px;
 }
 #anoModelo {
   display: flex;
@@ -169,4 +208,18 @@
   font-size: 12px;
   line-height: 150%;
   color: var(--white);
+}
+#indicadores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#indicadorImg {
+  margin: 5px;
+  width: 16px;
+  height: 6px;
+
+  background: #ffffff;
+  opacity: 0.4;
+  border-radius: 40px;
 }
