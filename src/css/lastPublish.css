@@ -42,12 +42,15 @@
   font-size: 28px;
 }
 #containerCardPublish {
-  margin: 0px 7vw;
+  margin: 0 auto;
+}
+#containerCarrosselPublish {
+  display: flex;
 }
 #cardPublish {
   width: 416px;
   height: 480px;
-
+  margin: 15px;
   background: rgba(255, 255, 255, 0.04);
   border-radius: 12px;
 }

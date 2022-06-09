@@ -20,10 +20,10 @@ const lastPublish = `
     <div id="containerCarrosselPublish"> 
       <div id="cardPublish">
         <img src="${Mazda}" />
-      <div id="anoModelo">
-        <p id="data">2019</p>
+        <div id="anoModelo">
+          <p id="data">2019</p>
         <div id="checkboxCard">
-        <input name="comprar" id="comprar" type="checkbox" />
+          <input name="comprar" id="comprar" type="checkbox" />
         <label id="tituloCheckbox" for="comprar">Comprar</label>
       </div>
     </div>
@@ -35,21 +35,83 @@ const lastPublish = `
       </div>
       <hr id="linhaVertical" />   
       <div id="botoesCardsCarrossel">
-      <button id="containerKilometragem">
-        <img  src="${Velocimetro}" />
-        <p>18k mi</p>
-      </button>
-      <button id="containerCambio">
-        <img  src="${Cambio}" />
-        <p>Manaul</p>
-      </button>
-      <button id="containerCombustivel">
-        <img  src="${Combustivel}" />
-        <p>Petrol</p>
-      </button>
+        <button id="containerKilometragem">
+          <img  src="${Velocimetro}" />
+          <p>18k mi</p>
+        </button>
+        <button id="containerCambio">
+          <img  src="${Cambio}" />
+          <p>Manaul</p>
+        </button>
+        <button id="containerCombustivel">
+          <img  src="${Combustivel}" />
+          <p>Petrol</p>
+        </button>
       </div>      
+    </div>
+    <div id="cardPublish">
+        <img src="${Mazda}" />
+        <div id="anoModelo">
+          <p id="data">2019</p>
+        <div id="checkboxCard">
+          <input name="comprar" id="comprar" type="checkbox" />
+        <label id="tituloCheckbox" for="comprar">Comprar</label>
       </div>
     </div>
+      <h5 id="tituloCardCarro">Mazda MX-5 Miata Convertible</h5>
+      <p id="precoCard">$38,500</p>
+      <div id="local">
+        <img src="${Local}" />
+        <p>Los Angeles</p>
+      </div>
+      <hr id="linhaVertical" />   
+      <div id="botoesCardsCarrossel">
+        <button id="containerKilometragem">
+          <img  src="${Velocimetro}" />
+          <p>18k mi</p>
+        </button>
+        <button id="containerCambio">
+          <img  src="${Cambio}" />
+          <p>Manaul</p>
+        </button>
+        <button id="containerCombustivel">
+          <img  src="${Combustivel}" />
+          <p>Petrol</p>
+        </button>
+      </div>      
+    </div>
+    <div id="cardPublish">
+        <img src="${Mazda}" />
+        <div id="anoModelo">
+          <p id="data">2019</p>
+        <div id="checkboxCard">
+          <input name="comprar" id="comprar" type="checkbox" />
+        <label id="tituloCheckbox" for="comprar">Comprar</label>
+      </div>
+    </div>
+      <h5 id="tituloCardCarro">Mazda MX-5 Miata Convertible</h5>
+      <p id="precoCard">$38,500</p>
+      <div id="local">
+        <img src="${Local}" />
+        <p>Los Angeles</p>
+      </div>
+      <hr id="linhaVertical" />   
+      <div id="botoesCardsCarrossel">
+        <button id="containerKilometragem">
+          <img  src="${Velocimetro}" />
+          <p>18k mi</p>
+        </button>
+        <button id="containerCambio">
+          <img  src="${Cambio}" />
+          <p>Manaul</p>
+        </button>
+        <button id="containerCombustivel">
+          <img  src="${Combustivel}" />
+          <p>Petrol</p>
+        </button>
+      </div>      
+    </div>
+  </div>
 </div>
 `;
 
