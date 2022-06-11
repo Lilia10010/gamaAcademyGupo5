@@ -1,10 +1,15 @@
 import nav from "../../components/nav";
+import brand from "../../components/brand";
 import footer from "../../components/footer";
 import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
+
+import downloadApp from "../../components/downloadApp";
+
 import imagemFundo from "../../img/ilustracoes/shape.png";
 import features from "../../components/features";
+
 
 
 let idx = 0;
@@ -14,15 +19,17 @@ let idx3 = 0;
 let Home = {
   render: async () => {
     let view = `
-    <div class="container">
+      <div class="container">
     <img id="imagemFundo" src="${imagemFundo}" />
     <div class="content">
-      ${nav}
-      ${banner}
-      ${menuSelect}        
-      ${Offers}
-      ${features}
-      ${footer}
+    ${nav}
+    ${banner}
+    ${menuSelect}        
+    ${Offers}
+    ${brand}
+    ${features}
+    ${downloadApp}
+    ${footer}
     </div>
     </div>`;
 
