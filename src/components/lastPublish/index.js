@@ -20,9 +20,11 @@ const lastPublish = `
   <img src="${ArrowIcon}"/>
 </div>
 </div>
-<div id="containerCardPublish">
-    <div id="containerCarrosselPublish">
-    <img src="${ChevronLeftIcon}" /> 
+<div id="carousel">
+    <div id="carouselPublish">
+      <button class="botaoLeft">
+        <img src="${ChevronLeftIcon}" /> 
+      </button>
       <div id="cardPublish">
         <img id="imgMazda" src="${Mazda}" />  
         <div id="bordaNovo">
@@ -32,9 +34,9 @@ const lastPublish = `
           <p id="data">2019</p>
         <div id="checkboxCard">
           <input name="comprar" id="comprar" type="checkbox" />
-        <label id="tituloCheckbox" for="comprar">Comprar</label>
+          <label id="tituloCheckbox" for="comprar">Comprar</label>
+        </div>
       </div>
-    </div>
       <h5 id="tituloCardCarro">Mazda MX-5 Miata Convertible</h5>
       <p id="precoCard">$38,500</p>
       <div id="local">
@@ -125,7 +127,9 @@ const lastPublish = `
         </button>
       </div>      
     </div>
-    <img src="${ChevronRightIcon}" />
+    <button class="botaoRight" data-js="carousel__button--next">
+    <img src="${ChevronRightIcon}"  />
+    </button>
   </div>
   <div id="indicadores">
   <div id="indicadorImg"></div>
