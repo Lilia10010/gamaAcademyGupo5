@@ -18,14 +18,26 @@
     transition: 0.5s;
 }
 
-.sectionFeatures .header .view-more:hover {
-    filter: brightness(3);
-    cursor: pointer;
+.sectionFeatures .header .view-more {
+    display: flex;
+}
+
+.sectionFeatures .header .view-more h3{
+    margin-right: 8px;
+    opacity: 0.7;
 }
 
 .sectionFeatures .header .view-more img {
     /* position: absolute; */
     padding-top: 10px;
+    width: 20px;
+    height: 20px;
+    margin: 5px 30px 0 0;
+    fill: red;
+}
+
+.sectionFeatures .header .view-more:hover h3{
+    opacity: 1;
 }
 
 .containerFeatures{
