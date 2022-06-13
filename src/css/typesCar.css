@@ -60,6 +60,8 @@
     height: 160px;
     padding-top: 31px;
     box-sizing: border-box;
+    transition: 0.5s;
+
 }
 
 .sectionTypesCar .carList .carList-Item img{
