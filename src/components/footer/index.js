@@ -12,7 +12,9 @@ import Messeger from "../../img/icons/messeger.png";
 import Vector from "../../img/icons/vector.png";
 import Finder from "../../img/icons/finder.png";
 
-let footer = `<footer>
+let footer = `
+<footer>
+<div>
 <div class="finder">
     <div id="circulo">
       <img id="img-logo" src="${Logo}"/>
@@ -86,6 +88,7 @@ let footer = `<footer>
     <p>Termos de uso</p>
     <p>Política de privacidade</p>
   </div>
+</div>
 </div>
 </footer>`;
 

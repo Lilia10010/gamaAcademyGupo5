@@ -11,7 +11,7 @@
 .sectionFeatures .header .view-more.header,
 .sectionFeatures .header .view-more h3 {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 24px;
     margin-top: 12px;
     align-items: center;
@@ -23,10 +23,69 @@
     cursor: pointer;
 }
 
-.sectionFeatures .header .view-more h3 {
-    color: var(--gray-800);
+.sectionFeatures .header .view-more img {
+    /* position: absolute; */
+    padding-top: 10px;
 }
 
-.sectionFeatures .header .view-more img {
+.containerFeatures{
+    display: flex;
+    max-width: 1076px;
+    margin: 53px auto 36px auto;
+}
+
+.containerFeatures li{
+    margin-bottom: 54px;
+}
+
+.containerFeatures .infos-left li{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
+
+
+.containerFeatures .infos-left li .text{
+    margin-right: 16px;
+}
+
+.containerFeatures .infos-left li h2,
+.containerFeatures .infos-right li h2{
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.containerFeatures .infos-left li p,
+.containerFeatures .infos-right li p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5rem;
+    opacity: 70%;
+    margin-top: 4px;
+}
+
+.containerFeatures .infos-right li{
+    display: flex;
+    flex-direction: row;
+}
+
+.containerFeatures .infos-right li .text{
+    margin-left: 16px;
+}
+
+.containerFeatures .road{
+    margin-top: -100px;
+    padding: 0 82px;
     position: relative;
+}
+
+.containerFeatures .road-car{
+    position: relative;
+    z-index: 2;
+}
+.containerFeatures .road-line{
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    z-index:1;
 }

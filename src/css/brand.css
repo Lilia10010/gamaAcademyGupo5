@@ -14,3 +14,9 @@
     height: 48px;
 
 }
+.brandItem img{
+    opacity: 0.6;
+}
+.brandItem:hover img{
+    opacity: 1;
+}
