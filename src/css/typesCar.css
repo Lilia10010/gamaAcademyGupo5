@@ -85,5 +85,8 @@
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.04);
     border-radius: 12px;
+}
+
+.sectionTypesCar .carList .carList-Item:hover h2{
     opacity: 1;
 }
