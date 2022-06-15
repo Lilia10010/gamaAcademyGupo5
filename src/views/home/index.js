@@ -5,6 +5,7 @@ import UltimasNovidades from "../../components/ultimasNovidades";
 import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
+import carrosselLoja from "../../components/carrosselLoja";
 
 import downloadApp from "../../components/downloadApp";
 
@@ -24,6 +25,7 @@ let Home = {
     ${banner}
     ${menuSelect}        
     ${Offers}
+    ${carrosselLoja}
     ${brand}
     ${downloadApp}
     ${UltimasNovidades}
