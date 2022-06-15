@@ -9,6 +9,9 @@ import Offers from "../../components/offers";
 import downloadApp from "../../components/downloadApp";
 
 import imagemFundo from "../../img/ilustracoes/shape.png";
+import features from "../../components/features";
+
+import typesCar from "../../components/typesCar";
 
 let idx = 0;
 let idx2 = 0;
@@ -22,9 +25,11 @@ let Home = {
     <div class="content">
     ${nav}
     ${banner}
-    ${menuSelect}        
+    ${menuSelect} 
+    ${typesCar}       
     ${Offers}
     ${brand}
+    ${features}
     ${downloadApp}
     ${UltimasNovidades}
     </div>
