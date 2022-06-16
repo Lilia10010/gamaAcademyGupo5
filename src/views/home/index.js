@@ -99,6 +99,44 @@ let Home = {
       imgs3.style.transform = `translateX(${-idx3 * 260}px)`;
     });
   },
+
+  after_render: async () => {
+    const slides = document.querySelectorAll('[data-js="carousel__item"]');
+    const nextButton = document.querySelector(
+      '[data-js="carousel__button--next"]'
+    );
+    const prevButton = document.querySelector(
+      '[data-js="carousel__button--prev"]'
+    );
+
+    const letSlideIndex = slides.length - 1;
+    let currentSlideIndex = 0;
+
+    const manipulateSlidesClasses = (correcSlideIndex) => {
+      slides.forEach((slide) =>
+        slide.classList.remove("carousel__item--visible")
+      );
+      slides[correcSlideIndex].classList.add("carousel__item--visible");
+    };
+
+    nextButton.addEventListener("click", () => {
+      const correctSlideIndex =
+        currentSlideIndex === letSlideIndex
+          ? (currentSlideIndex = 0)
+          : ++currentSlideIndex;
+
+      manipulateSlidesClasses(correctSlideIndex);
+    });
+
+    prevButton.addEventListener("click", () => {
+      const correctSlideIndex =
+        currentSlideIndex === 0
+          ? (currentSlideIndex = letSlideIndex)
+          : --currentSlideIndex;
+
+      manipulateSlidesClasses(correctSlideIndex);
+    });
+  },
 };
 
 export default Home;

@@ -59,7 +59,7 @@
   background-color: var(--gray-900);
   cursor: pointer;
 }
-#cardPublish {
+.cardPublish {
   display: flex;
   flex-direction: column;
   width: 416px;
@@ -68,7 +68,13 @@
   background: rgba(255, 255, 255, 0.04);
   border-radius: 12px;
 }
-#cardPublish img {
+.carousel__item {
+  display: none;
+}
+.carousel__item--visible {
+  display: block;
+}
+.cardPublish img {
   display: flex;
   width: 416px;
   height: 241px;
@@ -225,6 +231,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15vh;
 }
 #indicadorImg {
   margin: 5px;
