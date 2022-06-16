@@ -3,10 +3,12 @@ import Utils from "./service/Utils";
 import Home from "./views/home";
 import ErrorPage from "./views/error";
 import Catalogo from "./views/catalogo";
+import Detalhes from "./views/detalhes";
 
 let routes = {
   "/": Home,
-  '/catalogo' : Catalogo
+  '/catalogo' : Catalogo,
+  '/detalhes' : Detalhes
 };
 
 const router = async () => {
