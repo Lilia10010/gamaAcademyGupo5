@@ -6,14 +6,14 @@ let Detalhes = {
   render: async () => {
     let view = `
     <div class="container">
-    ${nav}
-
-    <div>
-      ${detalhesProduto}
-    </div>
-
-
-    ${footer}
+    <div class="content">
+      ${nav}
+      <div>
+        ${detalhesProduto}
+      </div>
+      </div>
+      ${footer}
+      
     </div>`
 
     return view;

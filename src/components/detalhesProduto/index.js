@@ -3,8 +3,8 @@
 import "../../css/detalhesProduto.css";
 
 let detalhesProduto = `
-    <section>
-        <h1>Let's Go!!!</h1>
+    <section class="content">
+        <h1>Let's Goooo!!!</h1>
     </section>
 `;
 
