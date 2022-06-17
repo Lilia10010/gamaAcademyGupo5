@@ -7,8 +7,8 @@
 @import "./offers.css";
 @import "./filtersRightCatalog.css";
 @import "./filtersLeftCatalog.css";
+@import "./lastPublish.css";
 @import "./features.css";
-
 
 
 @import "./downloadApp.css";
@@ -39,9 +39,6 @@
   --gray-200: #f5f4f8;
 }
 
-
-
-
 body {
   margin: 0px;
   padding: 0px;
@@ -68,11 +65,4 @@ ol,ul{
   align-items: center;
   width: 1296px;
   margin: 0 auto;
-}
-
-#imagemFundo {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 0;
 }
