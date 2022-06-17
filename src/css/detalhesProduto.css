@@ -1,3 +1,142 @@
-h1 {
-    color: cyan
+.wrap-main {
+    min-width: 1296px;
+    margin-top: 56px;
+}
+
+.breadcrumb ul {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.breadcrumb li::before {
+    content: ">";
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.5;
+    margin: 0 12px;
+
+}
+
+.breadcrumb li:first-child::before {
+    content: "";
+    margin: 0;
+}
+
+.breadcrumb li a {
+    color: #fff;
+    opacity: 0.5;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.breadcrumb li a:hover {
+    opacity: 1;
+}
+
+.section-title-social {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.section-title-social .title {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+  .section-title-social .area-like-share {
+    display: flex;
+  }
+
+  .area-like-share label {
+    cursor: pointer;
+    margin-left: 12px;
+  }
+
+  .area-like-share label input {
+    appearance: none;
+    display: none;
+  }
+
+  .area-like-share label span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 50px;
+    transition: 0.5s;
+  }
+
+  .area-like-share label input:checked ~ span,
+  label input:hover ~ span {
+    color: var(--primary);
+    background: #fff;
+  }
+  
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 61px;
+}
+
+.details .details-info {
+    min-width: 32.9rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.details .details-info .price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+}
+
+.details .details-info .more-infos {
+    display: flex;
+}
+
+.details .details-info .more-infos span {
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+.details .details-info .more-infos span:nth-child(2) {
+    text-decoration: underline;
+}
+
+.details .details-info .more-infos .icon {
+    margin-right: 6px;
+}
+
+.details .details-info .more-infos span::after {
+    content: "|";
+    color: #fff;
+    font-size: 22px;
+    font-weight: 200;
+    opacity: 0.15;
+    margin: 0 12px;
+
+}
+
+.details .details-info .more-infos span:last-child::after {
+    content: "";
+    margin: 0;
+}
+
+.details .details-info .card-seller {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    margin: 32px 0;
 }
