@@ -26,7 +26,7 @@ let detalhesProduto = `
                 </label> 
             </div>
         </section>
-        <section class="details">
+        <section class="details-section">
             <div class="details-slide">slide</div>
 
             <div class="details-info">
@@ -36,7 +36,22 @@ let detalhesProduto = `
                     <span><ion-icon class="icon" name="location-outline"></ion-icon>São Paulo</span>
                 </div>
                 <div class="card-seller">
-                Vendedor particular
+                    <h3 class="type-seller">Vendedor Particular</h3>
+                    <div class="seller-area">
+                        <img src="" alt="" />
+                        <h3 class="seller-name">Nome</h3>
+                        <span>
+                            <ul class="stars">
+                                <li><ion-icon name="star"></ion-icon></li>
+                                <li><ion-icon name="star"></ion-icon></li>
+                                <li><ion-icon name="star"></ion-icon></li>
+                                <li><ion-icon name="star"></ion-icon></li>
+                                <li><ion-icon name="star"></ion-icon></li>
+                            </ul>
+                            <span>(5 reviews)</span>
+                        </span>
+                    </div>
+                    <a href="#" title="">Outros anúncios deste vendedor</a>
                 </div>
             </div>
         </section>

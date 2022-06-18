@@ -77,31 +77,31 @@
     background: #fff;
   }
   
-.details {
+.details-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 61px;
 }
 
-.details .details-info {
+.details-section .details-info {
     min-width: 32.9rem;
     display: flex;
     flex-direction: column;
 }
 
-.details .details-info .price {
+.details-section .details-info .price {
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 130%;
 }
 
-.details .details-info .more-infos {
+.details-section .details-info .more-infos {
     display: flex;
 }
 
-.details .details-info .more-infos span {
+.details-section .details-info .more-infos span {
     color: #fff;
     font-style: normal;
     font-weight: 400;
@@ -109,15 +109,15 @@
     line-height: 150%;
 }
 
-.details .details-info .more-infos span:nth-child(2) {
+.details-section .details-info .more-infos span:nth-child(2) {
     text-decoration: underline;
 }
 
-.details .details-info .more-infos .icon {
+.details-section .details-info .more-infos .icon {
     margin-right: 6px;
 }
 
-.details .details-info .more-infos span::after {
+.details-section .details-info .more-infos span::after {
     content: "|";
     color: #fff;
     font-size: 22px;
@@ -127,12 +127,12 @@
 
 }
 
-.details .details-info .more-infos span:last-child::after {
+.details-section .details-info .more-infos span:last-child::after {
     content: "";
     margin: 0;
 }
 
-.details .details-info .card-seller {
+.details-section .details-info .card-seller {
     display: flex;
     flex-direction: column;
     padding: 20px;
