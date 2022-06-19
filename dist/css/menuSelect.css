@@ -1,7 +1,6 @@
 .menuBotoes {
   display: flex;
   flex-direction: column;
-  padding: 0% 14%;
   width: 100%;
 }
 #botaoNovo {
@@ -98,7 +97,6 @@
   color: #ffffff;
   border: none;
   opacity: 0.5;
-  
 }
 
 #botaoPesquisar {
@@ -119,6 +117,15 @@
   cursor: pointer;
 }
 
+#containerBotaoPesquisar {
+  display: flex;
+  align-items: center;
+}
+
+#containerBotaoPesquisar img {
+  margin-top: 0;
+}
+
 @media screen and (max-width: 1280px) {
   .menuBotoes {
     padding: 0px 6%;
@@ -126,6 +133,5 @@
 }
 @media screen and (min-width: 1366px) {
   .menuBotoes {
-    padding: 0px 12%;
   }
 }

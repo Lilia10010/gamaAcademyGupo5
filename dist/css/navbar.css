@@ -23,11 +23,15 @@
 #titulo {
   color: #ffffff;
   margin-left: 10px;
+  margin-right: 50px;
 }
 .menu {
   display: flex;
   margin-right: 88px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 32px;
 }
+
 .menu li {
   padding-right: 32px;
   list-style-type: none;

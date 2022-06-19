@@ -1,28 +1,24 @@
 /* start confg page catalog */
- .container-catalog {
+.container-catalog {
   display: flex;
   justify-content: center;
   color: #fff;
   padding-top: 100px;
-} 
+  width: 100%;
+}
 .container-catalog > .container-left-right {
   display: flex;
-  max-width: 1296px;
+  /*   max-width: 1296px; */
   width: 100%;
   justify-content: space-between;
-  margin: 10px;
 }
 
-@media (max-width: 768px)
-{
-   .container-catalog > div
-   {
-     flex-direction: column;
-   }
+@media (max-width: 768px) {
+  .container-catalog > div {
+    flex-direction: column;
+  }
 }
 /* and confg page catalog NAO É PRA FICAR AQUI */
-
-
 
 .container-left {
   max-width: 290px;
@@ -99,8 +95,7 @@ label input:hover ~ span {
 .checkbox-tipo {
   margin-bottom: 32px;
 }
-.checkbox-tipo label
-{
+.checkbox-tipo label {
   display: flex;
   align-items: center;
 }
@@ -180,21 +175,3 @@ label input:hover ~ span {
 }
 
 /* confg global */
-
-body,
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-}
-*::-webkit-scrollbar-track {
-  background-color: transparent;
-  position: absolute;
-  opacity: 0.7;
-}
-*::-webkit-scrollbar {
-  width: 3px;
-}
-*::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #fd5631;
-}
