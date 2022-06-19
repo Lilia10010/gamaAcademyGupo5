@@ -1,51 +1,39 @@
-.ultimas-novidades{
-    padding: 40px;
+.ultimas-novidades {
+  margin-bottom: 50px;
+}
+.titulo-novidades {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #fff;
 }
 
-.titulo-novidades{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    color: #fff;
+.novidades {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
-.ultimas-novidades h2{
-    margin-left: 13%;
+.oferta p {
+  color: #fd5631;
 }
 
-.ultimas-novidades a{
-    margin-right: 13%;
+.oferta h3 {
+  color: #fff;
+  opacity: 0.75;
 }
 
-.novidades{
-    display: flex;
-    justify-content: center;
+.usuario {
+  display: flex;
+  align-items: center;
 }
 
-.img-novidade{
-    margin: 15px;
+.usuario p {
+  font-size: 13px;
+  margin-left: 10px;
+  color: #fff;
 }
 
-.oferta p{
-    color: #FD5631;
-}
-
-.oferta h3{
-    color: #fff;
-    opacity: 0.75;
-}
-
-.usuario{
-    display: flex;
-    align-items: center;
-}
-
-.usuario p{
-    font-size: 13px;
-    margin-left: 10px;
-    color: #fff;
-}
-
-.calendario{
-    margin-left: 2px;
+.calendario {
+  margin-left: 2px;
 }

@@ -10,7 +10,6 @@
 @import "./lastPublish.css";
 @import "./features.css";
 
-
 @import "./downloadApp.css";
 
 @import "./footer.css";
@@ -18,7 +17,6 @@
 
 @import "./brand.css";
 @import "./typesCar.css";
-
 
 :root {
   --white: #ffffff;
@@ -45,7 +43,26 @@ body {
   box-sizing: border-box;
 }
 
-ol,ul{
+body,
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+  position: absolute;
+  opacity: 0.7;
+}
+*::-webkit-scrollbar {
+  width: 3px;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--primary);
+}
+
+ol,
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -65,4 +82,11 @@ ol,ul{
   align-items: center;
   width: 1296px;
   margin: 0 auto;
+}
+
+#imagemFundo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
 }
