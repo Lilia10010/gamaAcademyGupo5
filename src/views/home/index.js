@@ -117,41 +117,94 @@ let Home = {
   },
 
   after_render: async () => {
-    const slides = document.querySelectorAll('[data-js="carousel__item"]');
-    const nextButton = document.querySelector(
-      '[data-js="carousel__button--next"]'
-    );
-    const prevButton = document.querySelector(
-      '[data-js="carousel__button--prev"]'
-    );
+    const fila = document.querySelector(".container-carousel");
+    const cars = document.querySelectorAll(".cardPublish");
 
-    const letSlideIndex = slides.length - 1;
-    let currentSlideIndex = 0;
+    const setaEsquerda = document.getElementById("seta-esquerda");
+    const setaDireita = document.getElementById("seta-direita");
 
-    const manipulateSlidesClasses = (correcSlideIndex) => {
-      slides.forEach((slide) =>
-        slide.classList.remove("carousel__item--visible")
-      );
-      slides[correcSlideIndex].classList.add("carousel__item--visible");
-    };
+    // ? ----- ----- Evento Listener para a flecha direita. ----- -----
+    setaDireita.addEventListener("click", () => {
+      fila.scrollLeft += fila.offsetWidth;
 
-    nextButton.addEventListener("click", () => {
-      const correctSlideIndex =
-        currentSlideIndex === letSlideIndex
-          ? (currentSlideIndex = 0)
-          : ++currentSlideIndex;
-
-      manipulateSlidesClasses(correctSlideIndex);
+      const indicadorActivo = document.querySelector(".indicadores .activo");
+      if (indicadorActivo.nextSibling) {
+        indicadorActivo.nextSibling.classList.add("activo");
+        indicadorActivo.classList.remove("activo");
+      }
     });
 
-    prevButton.addEventListener("click", () => {
-      const correctSlideIndex =
-        currentSlideIndex === 0
-          ? (currentSlideIndex = letSlideIndex)
-          : --currentSlideIndex;
+    // ? ----- ----- Evento Listener para a flecha esquerda. ----- -----
+    setaEsquerda.addEventListener("click", () => {
+      fila.scrollLeft -= fila.offsetWidth;
 
-      manipulateSlidesClasses(correctSlideIndex);
+      const indicadorActivo = document.querySelector(".indicadores .activo");
+      if (indicadorActivo.previousSibling) {
+        indicadorActivo.previousSibling.classList.add("activo");
+        indicadorActivo.classList.remove("activo");
+      }
     });
+
+    // ? ----- ----- Paginação----- -----
+    const numeroPaginas = Math.ceil(cars.length / 3);
+    for (let i = 0; i < numeroPaginas; i++) {
+      const indicador = document.createElement("button");
+
+      if (i === 0) {
+        indicador.classList.add("activo");
+      }
+
+      document.querySelector(".indicadores").appendChild(indicador);
+      indicador.addEventListener("click", (e) => {
+        fila.scrollLeft = i * fila.offsetWidth;
+
+        document
+          .querySelector(".indicadores .activo")
+          .classList.remove("activo");
+        e.target.classList.add("activo");
+      });
+    }
+
+    // ? ----- ----- Hover ----- -----
+    cars.forEach((car) => {
+      car.addEventListener("mouseenter", (e) => {
+        const elemento = e.currentTarget;
+        setTimeout(() => {
+          cars.forEach((car) => car.classList.remove("hover"));
+          elemento.classList.add("hover");
+        }, 300);
+      });
+    });
+
+    fila.addEventListener("mouseleave", () => {
+      cars.forEach((car) => car.classList.remove("hover"));
+    });
+
+    // const slides = document.querySelectorAll(".carousel__item");
+    // const nextButton = document.querySelector(".carousel__button--next");
+    // const prevButton = document.querySelector(".carousel__button--prev");
+    // const letSlideIndex = slides.length - 1;
+    // let currentSlideIndex = 0;
+    // const manipulateSlidesClasses = (correcSlideIndex) => {
+    //   slides.forEach((slide) =>
+    //     slide.classList.remove(".carousel__item--visible")
+    //   );
+    //   slides[correcSlideIndex].classList.add("carousel__item--visible");
+    // };
+    // nextButton.addEventListener("click", () => {
+    //   const correctSlideIndex =
+    //     currentSlideIndex === letSlideIndex
+    //       ? (currentSlideIndex = 2)
+    //       : ++currentSlideIndex;
+    //   manipulateSlidesClasses(correctSlideIndex);
+    // });
+    // prevButton.addEventListener("click", () => {
+    //   const correctSlideIndex =
+    //     currentSlideIndex === 0
+    //       ? (currentSlideIndex = letSlideIndex)
+    //       : --currentSlideIndex;
+    //   manipulateSlidesClasses(correctSlideIndex);
+    // });
   },
 };
 
