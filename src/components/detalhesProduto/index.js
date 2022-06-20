@@ -40,7 +40,7 @@ let detalhesProduto = `
                     <div class="seller-area">
                         <img src="" alt="" />
                         <h3 class="seller-name">Nome</h3>
-                        <span>
+                        <span class="rating">
                             <ul class="stars">
                                 <li><ion-icon name="star"></ion-icon></li>
                                 <li><ion-icon name="star"></ion-icon></li>
