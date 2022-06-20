@@ -1,0 +1,80 @@
+.info-carro{
+    background: rgba(255, 255, 255, 0.04);
+    width: 746px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 27px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-info{
+    background: #1f1b2d;
+    border-radius: 15px;
+    text-align: center;
+    width: 80px;
+    height: 70px;
+}
+
+.img-info2{
+    background: #1f1b2d;
+    border-radius: 15px;
+    text-align: center;
+    width: 80px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+.img-info-certificado{
+    background: #1f1b2d;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.img-info img{
+    width: 50px;
+    margin-top: 10px;
+}
+
+.img-info2 img{
+    width: 50px;
+    margin-top: 10px;
+}
+
+.descricao-vendedor h1{
+    color: #fff;
+}
+
+.descricao{
+    color: #fff;
+    opacity: 0.75;
+    font-size: 20px;
+}
+
+.descricao-vendedor a{
+    color: #FD5631;
+    text-decoration-line: underline;
+}
+
+.publicado{
+    border-top: solid 1px rgba(255, 255, 255, 0.08);
+    color: #fff;
+    width: 800px;
+    font-size: 17px;
+    padding-top: 20px;
+}
+
+.descricao-titulo{
+    margin-top: 15px;
+}
+
+.titulo-dano{
+    margin-left: -11px;
+}
+
+.descricao-titulo p{
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}    
