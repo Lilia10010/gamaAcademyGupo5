@@ -100,12 +100,20 @@ const lastPublish = `
           </div>      
         </div>
         <div class="cardPublish " >
-          <img src="${Mercedes}" />
+          <div class="images-card">
+            <img data-js="carousel__item" class="carousel__item carousel__item--visible" src="${Mercedes}" />
+            <img data-js="carousel__item" class="carousel__item" src="${Bmw_640}" />
+            <img data-js="carousel__item" class="carousel__item" src="${Mazda}" />
+          </div>
           <div class="topo_image">
             <div id="bordaUsado">
               <p id="tituloUsado">Usado</p>
             </div>
             <div class="favoritos"><img src="${heart}"/></div>
+          </div>
+          <div class="botoes-image">
+            <button class="carousel__button--prev"><img src="${ChevronLeftIcon}"/></button>
+            <button class="carousel__button--next"><img src="${ChevronRightIcon}"/></button>
           </div>
           <div id="anoModelo">
             <p id="data">2019</p>

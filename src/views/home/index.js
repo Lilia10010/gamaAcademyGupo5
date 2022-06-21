@@ -115,7 +115,7 @@ let Home = {
       imgs3.style.transform = `translateX(${-idx3 * 260}px)`;
     });
   },
-
+  // ----- ------------ Carrossel -------- ----------------//
   after_render: async () => {
     const fila = document.querySelector(".container-carousel");
     const cars = document.querySelectorAll(".cardPublish");
@@ -180,31 +180,39 @@ let Home = {
       cars.forEach((car) => car.classList.remove("hover"));
     });
 
-    // const slides = document.querySelectorAll(".carousel__item");
-    // const nextButton = document.querySelector(".carousel__button--next");
-    // const prevButton = document.querySelector(".carousel__button--prev");
-    // const letSlideIndex = slides.length - 1;
-    // let currentSlideIndex = 0;
-    // const manipulateSlidesClasses = (correcSlideIndex) => {
-    //   slides.forEach((slide) =>
-    //     slide.classList.remove(".carousel__item--visible")
-    //   );
-    //   slides[correcSlideIndex].classList.add("carousel__item--visible");
-    // };
-    // nextButton.addEventListener("click", () => {
-    //   const correctSlideIndex =
-    //     currentSlideIndex === letSlideIndex
-    //       ? (currentSlideIndex = 2)
-    //       : ++currentSlideIndex;
-    //   manipulateSlidesClasses(correctSlideIndex);
-    // });
-    // prevButton.addEventListener("click", () => {
-    //   const correctSlideIndex =
-    //     currentSlideIndex === 0
-    //       ? (currentSlideIndex = letSlideIndex)
-    //       : --currentSlideIndex;
-    //   manipulateSlidesClasses(correctSlideIndex);
-    // });
+    const slides = document.querySelectorAll('[data-js="carousel__item"');
+    const nextButton = document.querySelector(".carousel__button--next");
+    const prevButton = document.querySelector(".carousel__button--prev");
+
+    const lastSlideIndex = slides.length - 1;
+    let currentSlideIndex = 0;
+
+    const manipulateSlidesClasses = (correctSlideIndex) => {
+      slides.forEach((slide) =>
+        slide.classList.remove("carousel__item--visible")
+      );
+      slides[correctSlideIndex].classList.add("carousel__item--visible");
+    };
+
+    nextButton.addEventListener("click", () => {
+      const correctSlideIndex =
+        currentSlideIndex === lastSlideIndex
+          ? (currentSlideIndex = 0)
+          : ++currentSlideIndex;
+
+      manipulateSlidesClasses(correctSlideIndex);
+    });
+
+    prevButton.addEventListener("click", () => {
+      const correctSlideIndex =
+        currentSlideIndex === 0
+          ? (currentSlideIndex = lastSlideIndex)
+          : --currentSlideIndex;
+
+      manipulateSlidesClasses(correctSlideIndex);
+
+      slides[correctSlideIndex].classList.add("carousel__item--visible");
+    });
   },
 };
 
