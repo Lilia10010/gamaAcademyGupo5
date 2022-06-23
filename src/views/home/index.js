@@ -5,13 +5,12 @@ import UltimasNovidades from "../../components/ultimasNovidades";
 import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
-
+import lastPublish from "../../components/lastPublish";
 import downloadApp from "../../components/downloadApp";
+import features from "../../components/features";
+import typesCar from "../../components/typesCar";
 
 import imagemFundo from "../../img/ilustracoes/shape.png";
-import features from "../../components/features";
-
-import typesCar from "../../components/typesCar";
 
 let idx = 0;
 let idx2 = 0;
@@ -20,24 +19,27 @@ let idx3 = 0;
 let Home = {
   render: async () => {
     let view = `
-    <div class="container">
-    <img id="imagemFundo" src="${imagemFundo}" />
-    <div class="content">
-    ${nav}
-    ${banner}
-    ${menuSelect} 
-    ${typesCar}       
-    ${Offers}
-    ${brand}
-    ${features}
-    ${downloadApp}
-    ${UltimasNovidades}
-    </div>
-    ${footer}
-    </div>`;
+      <div class="container">
+        <img id="imagemFundo" src="${imagemFundo}" />
+        <div class="content">
+          ${nav}
+          ${banner}
+          ${menuSelect} 
+          ${typesCar}       
+          ${Offers}
+          ${brand}
+          ${features}
+          ${lastPublish}
+          ${downloadApp}
+          ${UltimasNovidades}
+        </div>
+        ${footer}
+      </div>
+    `;
 
     return view;
   },
+
   after_render: async () => {
     const imgs = document.getElementById("img");
     const img = document.querySelectorAll("#img img");
@@ -110,6 +112,44 @@ let Home = {
       }
 
       imgs3.style.transform = `translateX(${-idx3 * 260}px)`;
+    });
+    /*  },
+
+  after_render: async () => { */
+    const slides = document.querySelectorAll('[data-js="carousel__item"]');
+    const nextButton = document.querySelector(
+      '[data-js="carousel__button--next"]'
+    );
+    const prevButton = document.querySelector(
+      '[data-js="carousel__button--prev"]'
+    );
+
+    const letSlideIndex = slides.length - 1;
+    let currentSlideIndex = 0;
+
+    const manipulateSlidesClasses = (correcSlideIndex) => {
+      slides.forEach((slide) =>
+        slide.classList.remove("carousel__item--visible")
+      );
+      slides[correcSlideIndex].classList.add("carousel__item--visible");
+    };
+
+    nextButton.addEventListener("click", () => {
+      const correctSlideIndex =
+        currentSlideIndex === letSlideIndex
+          ? (currentSlideIndex = 0)
+          : ++currentSlideIndex;
+
+      manipulateSlidesClasses(correctSlideIndex);
+    });
+
+    prevButton.addEventListener("click", () => {
+      const correctSlideIndex =
+        currentSlideIndex === 0
+          ? (currentSlideIndex = letSlideIndex)
+          : --currentSlideIndex;
+
+      manipulateSlidesClasses(correctSlideIndex);
     });
   },
 };

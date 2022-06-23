@@ -1,4 +1,4 @@
-import "../../css/footer.css"
+import "../../css/footer.css";
 import Logo from "../../img/icons/lupa.png";
 import Local from "../../img/icons/local.png";
 import Pais from "../../img/icons/pais.png";
@@ -21,8 +21,8 @@ let footer = `
       <img id="finder" src="${Finder}"/>
     </div>
   <div class="localizacao">
-    <h3><img src="${Pais}"/> pt-BR <img src="${Seta}"/></h3>
-    <h3><img src="${Local}"/> São Paulo <img src="${Seta}"/></h3>
+    <div><img src="${Pais}"/> pt-BR <img src="${Seta}"/></div>
+    <div><img src="${Local}"/> São Paulo <img src="${Seta}"/></div>
   </div>
 </div>
 <div class="container-footer">
@@ -73,10 +73,10 @@ let footer = `
           <p href="#"><img src="${Email}"/>email@finder.com.br</p>
           </div>
           <div class="icones">
-            <p href="#"><img src="${Face}"/></p>
-            <p href="#"><img src="${Twitter}"/></p>
-            <p href="#"><img src="${Telegram}"/></p>
-            <p id="messeger" href="#"><img src="${Messeger}"/></p>
+            <a href="#"><img src="${Face}"/></a>
+            <a href="#"><img src="${Twitter}"/></a>
+            <a href="#"><img src="${Telegram}"/></a>
+            <a id="messeger" href="#"><img src="${Messeger}"/></a>
           </div>
         </ul>
       </li>

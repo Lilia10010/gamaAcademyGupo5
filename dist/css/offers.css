@@ -1,0 +1,527 @@
+
+h1, h2, h3, h4, h5, h6, a, p, span {
+  font-family: "Noto Sans", sans-serif;
+  color: var(--white);
+}
+
+.sectionOffers {
+  display: flex;
+  flex-direction: column;
+  padding: 46px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.headerOffers {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.headerOffers h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.headerOffers a {
+  display: flex;
+  width: 190px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 12px;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.headerOffers a:hover {
+  filter: brightness(3);
+  cursor: pointer;
+}
+
+.headerOffers a p {
+  color: var(--gray-800);
+  margin-right: 10px;
+}
+
+.headerOffers a img {
+  width: 20px;
+  height: 20px;
+}
+
+.cardsOffers {
+  display: flex;
+  justify-content: space-around;
+  margin: auto 0;
+}
+
+.cardMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 636px;
+  height: 502px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.2px solid transparent;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.cardMain img {
+  width: 100%;
+  height: 263px;
+  border-radius: 12px 12px 0 0;
+}
+
+.cardMain:hover {
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cardMain:hover .details h2{
+  color: var(--white);
+}
+
+.cardMain:hover .buttonCarouselLeft {
+  opacity: 1;
+}
+
+.cardMain:hover .buttonCarouselRight {
+  opacity: 1;
+}
+
+.cardMain:hover .bookmark {
+  opacity: 1;
+}
+
+.carouselWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.carouselWrapper-sm {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 24px;
+  border-radius: 6px;
+}
+
+.badge span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.bookmark {
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: var(--white);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.bookmark ion-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+}
+
+.bookmark:hover ion-icon {
+  color: var(--accent);
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  min-height: 263px;
+  width: 100%;
+}
+
+.carousel-sm {
+  display: flex;
+  overflow: hidden;
+  min-height: 239px;
+  border-radius: 12px 0 0 12px;
+  width: 100%;
+}
+
+.containerCarousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0px);
+}
+
+.buttonCarouselLeft {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: absolute;
+  width: 10%;
+  height: 60%;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.buttonCarouselLeft img {
+  width: 80%;
+}
+
+.buttonCarouselLeft:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.4s linear;
+}
+
+.buttonCarouselRight {
+  opacity: 0;
+  display: flex;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 10%;
+  height: 60%;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+  right: 0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.buttonCarouselRight img {
+  width: 80%;
+}
+
+.buttonCarouselRight:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.4s linear;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details p {
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  height: 21px;
+}
+
+.details h2 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--gray-600);
+  height: 27px;
+  font-size: 1.125rem;
+  margin-bottom: 4px;
+  transition: all 0.3s ease;
+
+}
+
+.details span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary);
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.location {
+  display: flex;
+  height: 18px;
+  width: 150px;
+  margin-bottom: 16px;
+}
+
+.location p {
+  font-size: 0.875rem;
+  margin: 0 2px;
+  color: var(--gray-600);
+  padding-top: 3px;
+}
+
+.location img {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+}
+
+.line {
+  width: 95%;
+  height: 1px;
+  background: rgba(255, 255, 255, 1);
+}
+
+.detailsCar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+}
+
+.cardDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-900);
+  border-radius: 12px;
+  margin: auto;
+  width: 190px;
+  height: 62px;
+}
+
+.cardDetail img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 7px;
+}
+
+.cardDetail p {
+  font-size: 0.75rem;
+  margin: 0 2px;
+}
+
+.secondaryCards {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.otherCarsCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 636px;
+  height: 239px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.otherCarsCard:last-child {
+  margin-top: 22px;
+}
+
+.otherCarsCard:hover {
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.otherCarsCard:hover .details h2{
+  color: var(--white);
+}
+
+.otherCarsCard:hover .buttonCarouselLeft {
+  opacity: 1;
+}
+
+.otherCarsCard:hover .buttonCarouselRight {
+  opacity: 1;
+}
+
+.otherCarsCard:hover .bookmark {
+  opacity: 1;
+}
+
+
+.otherCarsCard > img {
+  width: 260px;
+  height: 100%;
+  border-radius: 12px 0 0 12px;
+}
+
+.cardInfoSecondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+}
+
+.headerDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerCheckBox {
+  height: 18px;
+}
+
+.headerCheckBox .checkmark {
+  height: 14px;
+}
+
+.locationSecondary {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.locationSecondary p {
+  font-size: 0.875rem;
+  margin: 0 2px;
+  color: var(--gray-600);
+  padding-top: 3px;
+}
+
+.locationSecondary img {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+}
+
+.cardDetailSecondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-900);
+  border-radius: 12px;
+  margin: auto;
+  width: 104px;
+  height: 62px;
+}
+
+.cardDetailSecondary img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 7px;
+}
+
+.cardDetailSecondary p {
+  font-size: 0.75rem;
+  margin: 0 2px;
+}
+/* checkbox */
+
+.check {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.check p {
+  padding-top: 1px;
+}
+
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  background-color: transparent;
+  border: 1px solid var(--gray-600);
+  border-radius: 20%;
+  transition: all 0.2s ease-in-out;
+}
+
+.check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.check input:checked ~ .checkmark {
+  background-color: var(--primary);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 2px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* checkbox end*/
+
+.cBlue {
+  background-color: var(--info);
+}
+
+.cYellow {
+  background-color: var(--warning);
+}
+
+@media (max-width: 1279px){
+  .cardsOffers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardMain {
+    margin-bottom: 1rem;
+  }
+
+  .otherCarsCard {
+    margin: 1rem 0;
+  }
+}
