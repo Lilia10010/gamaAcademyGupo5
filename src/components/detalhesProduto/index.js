@@ -1,4 +1,12 @@
-// import BrandMitsubishi from "@img/brand/mitsubishi.svg";
+import Arrow from "@img/icons/svg/arrowCarousel.svg";
+import Mercedes01 from "@img/cars/mercedes-cabriolet-1.jpg";
+import Mercedes02 from "@img/cars/mercedes-cabriolet-2.jpg";
+import Mercedes03 from "@img/cars/mercedes-cabriolet-3.jpg";
+import Mercedes04 from "@img/cars/mercedes-cabriolet-4.jpg";
+import Mercedes05 from "@img/cars/mercedes-cabriolet-5.jpg";
+import Mercedes06 from "@img/cars/mercedes-cabriolet-6.jpg";
+import Mercedes07 from "@img/cars/mercedes-cabriolet-7.jpg";
+import Mercedes08 from "@img/cars/mercedes-cabriolet-8.jpg";
 
 import "../../css/detalhesProduto.css";
 
@@ -27,7 +35,21 @@ let detalhesProduto = `
             </div>
         </section>
         <section class="details-section">
-            <div class="details-slide">slide</div>
+            <div class="carousel-container">
+		        <img src="${Mercedes01}" alt="a" class="current-image"/>
+		        <span class="arrow arrow-prev"> <img src="${Arrow}" alt="a"/> </span>
+		        <ul class="next-list">
+			        <li><img src="${Mercedes01}" alt="" class="image-of-list current-image-list"></li>
+			        <li><img src="${Mercedes02}" alt="" class="image-of-list"></li>
+			        <li><img src="${Mercedes03}" alt="" class="image-of-list"></li>
+			        <li><img src="${Mercedes04}" alt="" class="image-of-list"></li>
+			        <li><img src="${Mercedes05}" alt="" class="image-of-list"></li>
+			        <li><img src="${Mercedes06}" alt="" class="image-of-list"></li>
+			        <li><img src="${Mercedes07}" alt="" class="image-of-list"></li>
+			        <li><img src="${Mercedes08}" alt="" class="image-of-list"></li>
+		        </ul>
+		        <span class="arrow arrow-next"> <img src="${Arrow}" alt="a"/> </span>
+	        </div>
 
             <div class="details-info">
                 <h3 class="price">R$ 60.990</h3>
@@ -51,7 +73,20 @@ let detalhesProduto = `
                             <span>(5 reviews)</span>
                         </span>
                     </div>
-                    <a href="#" title="">Outros anúncios deste vendedor</a>
+                    <a class="others" href="#" title="">Outros anúncios deste vendedor</a>
+                </div>
+                <div class="form-send-email">
+                    <h3>Envie-me por e-mail quedas de preços e novas listagens para estes resultados de pesquisa:</h3>
+                    <form action="">
+                        <div class="send">
+                            <input type="email" placeholder="Email" value="" />
+                            <button type="submit">Assinar</button>
+                        </div>
+                        <div class="agree">
+                            <input checked type="checkbox" name="" id="toagree" />
+                            <label for="toagree">Concordo em receber alertas de queda de preço neste veículo e informações úteis sobre compras.</label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
