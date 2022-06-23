@@ -113,10 +113,7 @@
     cursor: pointer;
     top: 25%;
     transform: translateY(-25%);
-}
-
-.carousel-container .arrow:hover {
-    background-color: #eee;
+    box-shadow: 0 0 1em #000;
 }
 
 .carousel-container .arrow-prev{
@@ -135,7 +132,6 @@
 	height: 100px;
 	display: flex;
     justify-content: space-between;
-	align-items: center;
 	overflow: hidden;
 	transition: all .5s;
     margin-top: 1rem;

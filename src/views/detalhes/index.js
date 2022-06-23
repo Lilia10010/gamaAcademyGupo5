@@ -19,7 +19,7 @@ let Detalhes = {
 
     const carouselContainer = document.querySelector(".carousel-container");
     const listImageArea = carouselContainer.querySelector('.next-list');
-    const listOfImages = document.querySelector("image-of-list");
+    const listOfImages = listImageArea.querySelectorAll('img');
     const currentImage = carouselContainer.querySelector(".current-image");
     const arrowPrev = carouselContainer.querySelector(".arrow-prev");
     const arrowNext = carouselContainer.querySelector(".arrow-next");
@@ -32,7 +32,7 @@ let Detalhes = {
         "current-image-list");
       current.classList.remove("current-image-list");
       current = listImageArea.querySelector(".current-image-list");
-      listImageArea.scrollRight = current.offsetRight;
+      listImageArea.scrollLeft  = current.offsetLeft ;
       currentImage.attributes.src.value = current.attributes.src.value;
     }
 
@@ -59,9 +59,7 @@ let Detalhes = {
 
     arrowPrev.addEventListener("click", goToLeft);
     arrowNext.addEventListener("click", goToRight);
-    listOfImages.forEach((image) =>
-      image.addEventListener("click", changeCurrentImage)
-    );
+    listOfImages.forEach(image => image.addEventListener('click', changeCurrentImage));
 
   },
 };
