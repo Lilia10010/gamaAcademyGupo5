@@ -34,31 +34,31 @@ let filtersLeftCatalog = `
       <div class="title-filtro checkbox-tipo">
         <span>Tipo</span>
         <div class="container-checkbox-tipo">
-          <input type="checkbox" id="sedan-tipo" value="sedan" name="tipo-marca" />
-          <label for="sedan-tipo" class="checkbox">Sedan</label>
-
-          <input type="checkbox" id="suv-tipo" value="suv" name="tipo-marca" />
-          <label for="suv-tipo" class="checkbox">SUV</label>
-
-          <input type="checkbox" id="wagon-tipo" value="wagon" name="tipo-marca" />
-          <label for="wagon-tipo" class="checkbox">Wagon</label>
-
-          <input type="checkbox" id="crossover-tipo" value="crossover" name="tipo-marca" />
-          <label for="crossover-tipo" class="checkbox">Crossover</label>
-
-          <input type="checkbox" id="coupe-tipo" value="coupe" name="tipo-marca" />
+          <input class="tipo-marca" type="checkbox" id="coupe-tipo" value="Coupe" name="tipo-marca" />
           <label for="coupe-tipo" class="checkbox">Coupe</label>
 
-          <input type="checkbox" id="pickup-tipo" value="pickup" name="tipo-marca" />
+          <input class="tipo-marca" type="checkbox" id="suv-tipo" value="suv" name="tipo-marca" />
+          <label for="suv-tipo" class="checkbox">SUV</label>
+
+          <input class="tipo-marca" type="checkbox" id="wagon-tipo" value="wagon" name="tipo-marca" />
+          <label for="wagon-tipo" class="checkbox">Wagon</label>
+
+          <input class="tipo-marca" type="checkbox" id="crossover-tipo" value="crossover" name="tipo-marca" />
+          <label for="crossover-tipo" class="checkbox">Crossover</label>
+
+          <input class="tipo-marca" type="checkbox" id="coupe-tipo" value="coupe" name="tipo-marca" />
+          <label for="coupe-tipo" class="checkbox">Coupe</label>
+
+          <input class="tipo-marca" type="checkbox" id="pickup-tipo" value="pickup" name="tipo-marca" />
           <label for="pickup-tipo" class="checkbox">Pickup</label>
 
-          <input type="checkbox" id="1other-tipo" value="1other" name="tipo-marca" />
+          <input class="tipo-marca" type="checkbox" id="1other-tipo" value="1other" name="tipo-marca" />
           <label for="1other-tipo" class="checkbox">1 - other</label>
 
-          <input type="checkbox" id="2other-tipo" value="2other" name="tipo-marca" />
+          <input class="tipo-marca" type="checkbox" id="2other-tipo" value="2other" name="tipo-marca" />
           <label for="2other-tipo" class="checkbox">2 - other</label>
 
-          <input type="checkbox" id="3other-tipo" value="3other" name="tipo-marca" />
+          <input class="tipo-marca" type="checkbox" id="3other-tipo" value="3other" name="tipo-marca" />
           <label for="3other-tipo" class="checkbox">3 - other</label>
         </div>
       </div>
