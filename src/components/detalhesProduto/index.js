@@ -1,4 +1,3 @@
-import Arrow from "@img/icons/svg/arrowCarousel.svg";
 import Mercedes01 from "@img/cars/mercedes-cabriolet-1.jpg";
 import Mercedes02 from "@img/cars/mercedes-cabriolet-2.jpg";
 import Mercedes03 from "@img/cars/mercedes-cabriolet-3.jpg";
@@ -37,7 +36,7 @@ let detalhesProduto = `
         <section class="details-section">
             <div class="carousel-container">
 		        <img src="${Mercedes01}" alt="a" class="current-image"/>
-		        <span class="arrow arrow-prev"> <img src="${Arrow}" alt="a"/> </span>
+		        <span class="arrow arrow-prev"> <ion-icon name="chevron-back-outline"></ion-icon> </span>
 		        <ul class="next-list">
 			        <li><img src="${Mercedes01}" alt="" class="image-of-list current-image-list"></li>
 			        <li><img src="${Mercedes02}" alt="" class="image-of-list"></li>
@@ -48,7 +47,7 @@ let detalhesProduto = `
 			        <li><img src="${Mercedes07}" alt="" class="image-of-list"></li>
 			        <li><img src="${Mercedes08}" alt="" class="image-of-list"></li>
 		        </ul>
-		        <span class="arrow arrow-next"> <img src="${Arrow}" alt="a"/> </span>
+		        <span class="arrow arrow-next"> <ion-icon name="chevron-back-outline"></ion-icon> </span>
 	        </div>
 
             <div class="details-info">
