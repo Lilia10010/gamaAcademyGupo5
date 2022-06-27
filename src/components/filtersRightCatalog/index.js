@@ -1,14 +1,13 @@
-import "../../css/filtersRightCatalog.css"
-import cardGroup from './cardGroup'
+import "../../css/filtersRightCatalog.css";
+import cardGroup from "./cardGroup";
 
-import ordenarIcon from "../../img/icons/svg/ordenar-icon.svg"
-import carIcon from "../../img/icons/svg/car.svg"
-import listIcon from "../../img/icons/svg/list.svg"
-import gridIcon from "../../img/icons/svg/grid-icon.svg"
+import ordenarIcon from "../../img/icons/svg/ordenar-icon.svg";
+import carIcon from "../../img/icons/svg/car.svg";
+import listIcon from "../../img/icons/svg/list.svg";
+import gridIcon from "../../img/icons/svg/grid-icon.svg";
 
-import switchHorizontal from "../../img/icons/svg/switch-horizontal.png"
-import barraVertical from "../../img/icons/barraVerticalMenu.png"
-
+import switchHorizontal from "../../img/icons/svg/switch-horizontal.png";
+import barraVertical from "../../img/icons/barraVerticalMenu.png";
 
 let filtersRightCatalog = `
   <section class="section-continer-header-catalog">
@@ -60,16 +59,8 @@ let filtersRightCatalog = `
     <div class="wrapper-catalog"> 
 
       <div class="wrapper-catalog-card">
-        ${cardGroup}
-        ${cardGroup}
-        ${cardGroup}
-        ${cardGroup}
-        ${cardGroup}
-        ${cardGroup}
+        
       </div>
-
-
-    
 
 
        <div class="filter-header-catalog-left">
