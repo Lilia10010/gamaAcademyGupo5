@@ -6,6 +6,8 @@ import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
 import lastPublish from "../../components/lastPublish";
+import carrosselLoja from "../../components/carrosselLoja";
+
 import downloadApp from "../../components/downloadApp";
 import features from "../../components/features";
 import typesCar from "../../components/typesCar";
@@ -30,6 +32,7 @@ let Home = {
           ${brand}
           ${features}
           ${lastPublish}
+          ${carrosselLoja}
           ${downloadApp}
           ${UltimasNovidades}
         </div>
