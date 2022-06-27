@@ -30,6 +30,7 @@ let Catalogo = {
   after_render: async () => {
     let resultAllCars = document.querySelector(".wrapper-catalog-card");
 
+    /* ===  pegar todos os adverts === */
     function getAllCars() {
       fetch("https://e-carros-api.herokuapp.com/adverts")
         .then((res) => res.json())
@@ -78,14 +79,8 @@ let Catalogo = {
     }
     getAllCars();
 
-    /* let checkBoxesTipoMarca = document.getElementsByClassName("tipo-marca"); */
-
-    var checkBoxesTipoMarca = document.querySelector("input[name=tipo-marca]");
-    checkBoxesTipoMarca.addEventListener("change", (e) => {
-      console.log(" >>>", e);
-      let getCarType = checkBoxesTipoMarca.value;
-
-      fetch(`https://e-carros-api.herokuapp.com/adverts?cartype=${getCarType}`)
+    function resultFilter(params, value) {
+      fetch(`https://e-carros-api.herokuapp.com/adverts?${params}=${value}`)
         .then((res) => res.json())
         .then((response) => {
           resultAllCars.innerHTML = `${response.map(
@@ -127,7 +122,82 @@ let Catalogo = {
         `
           )}`;
         });
-    });
+    }
+    /* === pegar por tipo da marca === */
+    function getValues() {
+      var selectedTipoMarca = document.querySelectorAll(
+        "[name=tipo-marca]:checked"
+      );
+      var valuesCardType = [];
+
+      for (var i = 0; i < selectedTipoMarca.length; i++) {
+        valuesCardType.push(selectedTipoMarca[i].value);
+      }
+
+      if (valuesCardType.length >= 1) {
+        resultFilter("cartype", valuesCardType);
+      } else {
+        getAllCars();
+      }
+    }
+    // adicionar ação ao clique no checkbox
+    var checkboxesTipoMarca = document.querySelectorAll("[name=tipo-marca]");
+    for (var i = 0; i < checkboxesTipoMarca.length; i++) {
+      checkboxesTipoMarca[i].addEventListener("click", getValues, false);
+    }
+
+    /* === pegar por marca === */
+    document
+      .getElementById("select-marca")
+      .addEventListener("change", function () {
+        if (this.value != "all") {
+          resultFilter("brand", this.value);
+        } else {
+          getAllCars();
+        }
+      });
+
+    /* === pegar por modelo === */
+    document
+      .getElementById("select-modelo")
+      .addEventListener("change", function () {
+        if (this.value != 0) {
+          resultFilter("model", this.value);
+        } else {
+          getAllCars();
+        }
+      });
+
+    /* === pegar por ano === */
+    document
+      .getElementById("select-ano")
+      .addEventListener("change", function () {
+        if (this.value != "all") {
+          resultFilter("year", this.value);
+        } else {
+          getAllCars();
+        }
+      });
+
+    /* === pegar por cor === */
+    function getValuesColor() {
+      var selectedCorlor = document.querySelectorAll("[name=cor]:checked");
+      var valuesColor = [];
+
+      for (var i = 0; i < selectedCorlor.length; i++) {
+        valuesColor.push(selectedCorlor[i].value);
+      }
+
+      if (valuesColor.length >= 1) {
+        resultFilter("color", valuesColor);
+      } else {
+        getAllCars();
+      }
+    }
+    var checkboxesTipoMarca = document.querySelectorAll("[name=cor]");
+    for (var i = 0; i < checkboxesTipoMarca.length; i++) {
+      checkboxesTipoMarca[i].addEventListener("click", getValuesColor, false);
+    }
   },
 };
 

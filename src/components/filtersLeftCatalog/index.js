@@ -46,8 +46,8 @@ let filtersLeftCatalog = `
           <input class="tipo-marca" type="checkbox" id="crossover-tipo" value="crossover" name="tipo-marca" />
           <label for="crossover-tipo" class="checkbox">Crossover</label>
 
-          <input class="tipo-marca" type="checkbox" id="coupe-tipo" value="coupe" name="tipo-marca" />
-          <label for="coupe-tipo" class="checkbox">Coupe</label>
+          <input class="tipo-marca" type="checkbox" id="hatback-tipo" value="Hatback" name="tipo-marca" />
+          <label for="hatback-tipo" class="checkbox">Hatback</label>
 
           <input class="tipo-marca" type="checkbox" id="pickup-tipo" value="pickup" name="tipo-marca" />
           <label for="pickup-tipo" class="checkbox">Pickup</label>
@@ -66,17 +66,23 @@ let filtersLeftCatalog = `
        <div class="title-filtro select-marca-modelo">
         <span>Marca e modelo</span>
         <div class="custom-dropdown">
-          <select>
-              <option>Marca</option>
-              <option>marca 01</option>
-              <option>marca 02</option>
-              <option>marca 03</option>
+          <select id="select-marca">
+              <option value="all">Marca</option>
+              <option value="0">Renault</option>
+              <option value="1">Honda</option>
+              <option value="2">Infiniti</option>
+              <option value="3">Mercedez Benz</option>
+              <option value="4">Lexus</option>
+              <option value="5">Mitsubishi</option>
+              <option value="6">Mazda</option>
+              <option value="7">Hyundai</option>
+              <option value="8">Audi</option>
           </select>
 
-           <select>
-              <option>Modelo</option>
-              <option>modelo 01</option>
-              <option>modelo 02</option>
+           <select id="select-modelo">
+              <option value="0">Modelo</option>
+              <option value="Fiat Uno">Fiat Uno</option>
+              <option value="Honda Civic">Honda Civic</option>
               <option>modelo 03</option>
           </select>
         </div>
@@ -85,11 +91,22 @@ let filtersLeftCatalog = `
       <div class="title-filtro">
         <span>Ano</span>
         <div class="custom-column-two custom-dropdown">
-          <select>
-              <option>Todos</option>
-              <option>mês 01</option>
-              <option>mês 02</option>
-              <option>mês 03</option>
+          <select id="select-ano">
+              <option value="all">Todos</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+
           </select>
           <div class="divisor"> <div></div></div>
           <select>
@@ -164,26 +181,26 @@ let filtersLeftCatalog = `
        <div class="title-filtro checkbox-tipo">
           <span>Cor</span>
           <div class="container-checkbox-tipo">
-            <input type="checkbox" id="preto-cor" value="preto" name="cor" />
+            <input type="checkbox" id="preto-cor" value="Preto" name="cor" />
             <label for="preto-cor" class="checkbox">Preto</label>
 
-            <input type="checkbox" id="azul-cor" value="azul" name="cor" />
+            <input type="checkbox" id="1other-cor" value="Branco" name="cor" />
+            <label for="1other-cor" class="checkbox">Branco</label>
+
+            <input type="checkbox" id="azul-cor" value="Azul" name="cor" />
             <label for="azul-cor" class="checkbox">Azul</label>
 
-            <input type="checkbox" id="Marrom-cor" value="marrom" name="cor" />
+            <input type="checkbox" id="Marrom-cor" value="Marrom" name="cor" />
             <label for="Marrom-cor" class="checkbox">Marrom</label>
 
-            <input type="checkbox" id="dourado-cor" value="dourado" name="cor" />
+            <input type="checkbox" id="dourado-cor" value="Dourado" name="cor" />
             <label for="dourado-cor" class="checkbox">Dourado</label>
 
-            <input type="checkbox" id="prata-cor" value="prata" name="cor" />
+            <input type="checkbox" id="prata-cor" value="Prata" name="cor" />
             <label for="prata-cor" class="checkbox">Prata</label>
 
-            <input type="checkbox" id="amarelo-cor" value="amarelo" name="cor" />
+            <input type="checkbox" id="amarelo-cor" value="Amarelo" name="cor" />
             <label for="amarelo-cor" class="checkbox">Amarelo</label>
-
-            <input type="checkbox" id="1other-cor" value="1other-cor" name="cor" />
-            <label for="1other-cor" class="checkbox">1 - other</label>
 
             <input type="checkbox" id="2other-cor" value="2other-cor" name="cor" />
             <label for="2other-cor" class="checkbox">2 - other</label>
