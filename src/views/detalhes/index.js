@@ -33,6 +33,13 @@ let Detalhes = {
       current = listImageArea.querySelector(".current-image-list");
       listImageArea.scrollLeft  = current.offsetLeft ;
       currentImage.attributes.src.value = current.attributes.src.value;
+
+      let contador = document.querySelectorAll('.next-list li');
+      contador.forEach((number, index) => console.log(parseInt(index, 10) + 1));
+      let lista = document.querySelectorAll('.next-list li');
+
+      // contador.forEach(number => listImageAreaa += `<li>${number}</li>`);
+      console.log(lista.length);
     }
     arrowNext.addEventListener("click", goToNextSlide);
 

@@ -15,7 +15,9 @@ let detalhesProduto = `
         <nav class="breadcrumb" aria-label="Breadcrumb">
             <ul>
                 <li><a href="#">Home</a></li>
+                <span class="arrow-breadcrumb"><ion-icon name="chevron-forward-outline"></ion-icon></span>
                 <li><a href="#/catalogo">Usados</a></li>
+                <span class="arrow-breadcrumb"><ion-icon name="chevron-forward-outline"></ion-icon></span>
                 <li><span aria-current="page">Mercedes-Benz E 400 Cabriolet</span></li>
             </ul>
         </nav>
@@ -35,7 +37,7 @@ let detalhesProduto = `
             </div>
         </section>
         <section class="details-section">
-            <div className="datails-container">
+            <div class="datails-container">
                 <div class="carousel-container">
                     <img src="${Mercedes01}" alt="a" class="current-image"/>
                     <span class="arrow arrow-prev"> <ion-icon name="chevron-back-outline"></ion-icon> </span>
@@ -54,10 +56,10 @@ let detalhesProduto = `
                 <div class="specifications">
                     <h2>Especificações</h2>
                     <ul class="specifications-list">
-                        <li class="specifications-item"><span>Ano:</span> 2018</li>
-                        <li class="specifications-item"><span>Km:</span> 25K</li>
-                        <li class="specifications-item"><span>Tipo:</span> Conversivel</li>
-                        <li class="specifications-item"><span>Trnasmissão:</span> Automático</li>
+                        <li class="specifications-item">Ano: <span>2018</span></li>
+                        <li class="specifications-item">Km: <span>25K</span></li>
+                        <li class="specifications-item">Tipo: <span>Conversivel</span></li>
+                        <li class="specifications-item">Trnasmissão: <span>Automático</span></li>
                     </ul>
                 </div>
             </div>
