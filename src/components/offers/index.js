@@ -1,4 +1,3 @@
-
 import ArrowIcon from "@img/icons/svg/arrow.svg";
 import ChevronLeftIcon from "@img/icons/svg/chevronLeft.svg";
 import ChevronRightIcon from "@img/icons/svg/chevronRight.svg";
@@ -34,7 +33,7 @@ let Offers = `
       <button class="buttonCarouselLeft" id="buttonLeft">
         <img src="${ChevronLeftIcon}" />
       </button>
-      <div class="carousel">
+      <div class="carouselOffers">
           <div class="containerCarousel" id="img">
             <img src="${MercedesCarImage}" />
             <img src="${MercedesCarImage}" />
@@ -203,7 +202,5 @@ let Offers = `
 </div>
 </section>
 `;
-
-
 
 export default Offers;
