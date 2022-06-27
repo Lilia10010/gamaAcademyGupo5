@@ -38,7 +38,7 @@
 .section-title-social {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 24px;
+    margin-bottom: 37px;
 }
 
 .section-title-social .title {
@@ -83,9 +83,23 @@
     justify-content: space-between;
 }
 
+.details-section .datails-container {
+    max-width: 46.625rem;
+}
+
+.datails-container .specifications .specifications-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.datails-container .specifications .specifications-item {
+    display: block;
+    margin-bottom: 2px;
+}
+
 /* Carousel */
 .details-section .carousel-container {
-    max-width: 746px;
+    max-width: 46.625rem;
     padding-bottom: 1rem;
 	position: relative;
 	display: flex;
@@ -128,6 +142,7 @@
 
 .carousel-container .arrow-prev{
     margin-left: 1rem;
+    padding-left: 8px;
 }
 
 .carousel-container .arrow-next{
@@ -179,7 +194,12 @@
 
 .carousel-container .next-list .image-of-list:hover {
 	opacity: 1;
-    border: 2px solid #FD5631;
+    border: 2px solid #fff;
+}
+
+.carousel-container .next-list .current-image-list:hover{
+    border-color: var(--primary);
+    cursor: default;
 }
 
 .carousel-container .next-list .current-image-list {
@@ -199,7 +219,7 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 130%;
-    margin-bottom: 1rem;
+    margin: 3.25rem 0 1rem 0;
 }
 
 .details-section .details-info .more-infos {
@@ -251,7 +271,15 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 0;
+}
+.card-seller .seller-area {
+    margin-top: 12px;
+}
+
+.card-seller .seller-area img {
+    float: left;
+    margin-right: 8px;
 }
 
 .card-seller .seller-name {
@@ -259,6 +287,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
+    margin: 0;
 }
 
 .card-seller .rating{
@@ -296,6 +325,34 @@
 .card-seller .others:hover {
     color: var(--primary);
     text-decoration: none;
+}
+
+.card-seller .number-seller,
+.card-seller .button-send-email {
+    text-align: left;
+    box-sizing: border-box;
+    width: 188px;
+    padding: 0.8785rem 2rem;
+    background-color: var(--primary);
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    border: none;
+    border-radius: 8px;
+}
+
+.card-seller .number-seller {
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.card-seller .button-send-email:hover {
+    background-color: #fff;
+    color: var(--primary);
+    cursor: pointer;
 }
 
 .form-send-email {

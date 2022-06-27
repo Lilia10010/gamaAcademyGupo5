@@ -33,10 +33,9 @@ let Home = {
           ${downloadApp}
           ${UltimasNovidades}
         </div>
-        ${footer}
+          ${footer}
       </div>
     `;
-
     return view;
   },
 

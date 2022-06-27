@@ -1,3 +1,4 @@
+import Seller from "@img/user-seller.png";
 import Mercedes01 from "@img/cars/mercedes-cabriolet-1.jpg";
 import Mercedes02 from "@img/cars/mercedes-cabriolet-2.jpg";
 import Mercedes03 from "@img/cars/mercedes-cabriolet-3.jpg";
@@ -34,22 +35,33 @@ let detalhesProduto = `
             </div>
         </section>
         <section class="details-section">
-            <div class="carousel-container">
-		        <img src="${Mercedes01}" alt="a" class="current-image"/>
-		        <span class="arrow arrow-prev"> <ion-icon name="chevron-back-outline"></ion-icon> </span>
-		        <ul class="next-list">
-			        <li><img src="${Mercedes01}" alt="" class="image-of-list current-image-list"></li>
-			        <li><img src="${Mercedes02}" alt="" class="image-of-list"></li>
-			        <li><img src="${Mercedes03}" alt="" class="image-of-list"></li>
-			        <li><img src="${Mercedes04}" alt="" class="image-of-list"></li>
-			        <li><img src="${Mercedes05}" alt="" class="image-of-list"></li>
-			        <li><img src="${Mercedes06}" alt="" class="image-of-list"></li>
-			        <li><img src="${Mercedes07}" alt="" class="image-of-list"></li>
-			        <li><img src="${Mercedes08}" alt="" class="image-of-list"></li>
-		        </ul>
-		        <span class="arrow arrow-next"> <ion-icon name="chevron-back-outline"></ion-icon> </span>
-	        </div>
-
+            <div className="datails-container">
+                <div class="carousel-container">
+                    <img src="${Mercedes01}" alt="a" class="current-image"/>
+                    <span class="arrow arrow-prev"> <ion-icon name="chevron-back-outline"></ion-icon> </span>
+                    <ul class="next-list">
+                        <li><img src="${Mercedes01}" alt="" class="image-of-list current-image-list"></li>
+                        <li><img src="${Mercedes02}" alt="" class="image-of-list"></li>
+                        <li><img src="${Mercedes03}" alt="" class="image-of-list"></li>
+                        <li><img src="${Mercedes04}" alt="" class="image-of-list"></li>
+                        <li><img src="${Mercedes05}" alt="" class="image-of-list"></li>
+                        <li><img src="${Mercedes06}" alt="" class="image-of-list"></li>
+                        <li><img src="${Mercedes07}" alt="" class="image-of-list"></li>
+                        <li><img src="${Mercedes08}" alt="" class="image-of-list"></li>
+                    </ul>
+                    <span class="arrow arrow-next"> <ion-icon name="chevron-back-outline"></ion-icon> </span>
+                </div>
+                <div class="specifications">
+                    <h2>Especificações</h2>
+                    <ul class="specifications-list">
+                        <li class="specifications-item"><span>Ano:</span> 2018</li>
+                        <li class="specifications-item"><span>Km:</span> 25K</li>
+                        <li class="specifications-item"><span>Tipo:</span> Conversivel</li>
+                        <li class="specifications-item"><span>Trnasmissão:</span> Automático</li>
+                    </ul>
+                </div>
+            </div>
+            
             <div class="details-info">
                 <h3 class="price">R$ 60.990</h3>
                 <div class="more-infos">
@@ -59,7 +71,7 @@ let detalhesProduto = `
                 <div class="card-seller">
                     <h3 class="type-seller">Vendedor Particular</h3>
                     <div class="seller-area">
-                        <img src="" alt="" />
+                        <img src="${Seller}" alt="" />
                         <h3 class="seller-name">Nome</h3>
                         <span class="rating">
                             <ul class="stars">
@@ -73,6 +85,8 @@ let detalhesProduto = `
                         </span>
                     </div>
                     <a class="others" href="#" title="">Outros anúncios deste vendedor</a>
+                    <span class="number-seller">(11) *** ****</span>
+                    <input class="button-send-email" type="submit" value="Enviar email" />
                 </div>
                 <div class="form-send-email">
                     <h3>Envie-me por e-mail quedas de preços e novas listagens para estes resultados de pesquisa:</h3>
