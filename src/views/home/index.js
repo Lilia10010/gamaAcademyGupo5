@@ -33,8 +33,8 @@ let Home = {
           ${downloadApp}
           ${UltimasNovidades}
         </div>
+        </div>
         ${footer}
-      </div>
     `;
 
     return view;
@@ -113,20 +113,7 @@ let Home = {
 
       imgs3.style.transform = `translateX(${-idx3 * 260}px)`;
     });
-    /*  },
 
-  after_render: async () => { */
-    /*    const slides = document.querySelectorAll('[data-js="carousel__item"]');
-    const nextButton = document.querySelector(
-      '[data-js="carousel__button--next"]'
-    );
-    const prevButton = document.querySelector(
-      '[data-js="carousel__button--prev"]'
-    );
-
-    const letSlideIndex = slides.length - 1;
-  },
-  after_render: async () => { */
     // ----- ------------ Carrossel -------- ----------------//
     const fila = document.querySelector(".container-carousel");
     const cars = document.querySelectorAll(".cardPublish");
