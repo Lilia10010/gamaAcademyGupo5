@@ -1,122 +1,65 @@
 import nav from "../../components/nav";
-import brand from "../../components/brand";
 import footer from "../../components/footer";
-import UltimasNovidades from "../../components/ultimasNovidades";
-import banner from "../../components/banner";
-import menuSelect from "../../components/menuSelect";
-import Offers from "../../components/offers";
-import lastPublish from "../../components/lastPublish";
-import carrosselLoja from "../../components/carrosselLoja";
+import detalhesProduto from "../../components/detalhesProduto";
 
-import downloadApp from "../../components/downloadApp";
-import features from "../../components/features";
-import typesCar from "../../components/typesCar";
-
-import imagemFundo from "../../img/ilustracoes/shape.png";
-
-let idx = 0;
-let idx2 = 0;
-let idx3 = 0;
-
-let Home = {
+let Detalhes = {
   render: async () => {
     let view = `
-      <div class="container">
-        <img id="imagemFundo" src="${imagemFundo}" />
-        <div class="content">
-          ${nav}
-          ${banner}
-          ${menuSelect} 
-          ${typesCar}       
-          ${Offers}
-          ${brand}
-          ${features}
-          ${lastPublish}
-          ${carrosselLoja}
-          ${downloadApp}
-          ${UltimasNovidades}
-        </div>
-        </div>
+    <div class="container">
+      <div class="content">
+        ${nav}
+        ${detalhesProduto}
+      </div>
         ${footer}
-    `;
+    </div>`;
+
     return view;
   },
 
   after_render: async () => {
-    const imgs = document.getElementById("img");
-    const img = document.querySelectorAll("#img img");
-    const imgs2 = document.getElementById("img2");
-    const img2 = document.querySelectorAll("#img2 img");
-    const imgs3 = document.getElementById("img3");
-    const img3 = document.querySelectorAll("#img3 img");
 
-    let chevronRight = document.getElementById("buttonRight");
-    chevronRight.addEventListener("click", () => {
-      idx++;
+     // Carousel of images Seller
+    const carouselContainer = document.querySelector(".carousel-container");
+    const listImageArea = carouselContainer.querySelector('.next-list');
+    const listOfImages = listImageArea.querySelectorAll('img');
+    const currentImage = carouselContainer.querySelector(".current-image");
+    const arrowPrev = carouselContainer.querySelector(".arrow-prev");
+    const arrowNext = carouselContainer.querySelector(".arrow-next");
 
-      if (idx > img.length - 1) {
-        idx = 0;
-      }
+    function goToNextSlide() {      
+      let current = listImageArea.querySelector(".current-image-list");
+      current.parentElement.nextElementSibling.children[0].classList.add("current-image-list");
+      current.classList.remove("current-image-list");
+      current = listImageArea.querySelector(".current-image-list");
+      listImageArea.scrollLeft  = current.offsetLeft ;
+      currentImage.attributes.src.value = current.attributes.src.value;
+    }
+    arrowNext.addEventListener("click", goToNextSlide);
 
-      imgs.style.transform = `translateX(${-idx * 636}px)`;
-    });
+    function goToPrevSlide() {
+      let current = listImageArea.querySelector(".current-image-list");
+      current.parentElement.previousElementSibling.children[0].classList.add("current-image-list");
+      current.classList.remove("current-image-list");
+      current = listImageArea.querySelector(".current-image-list");
+      listImageArea.scrollLeft = current.offsetLeft;
+      currentImage.attributes.src.value = current.attributes.src.value;
+    }
+    arrowPrev.addEventListener("click", goToPrevSlide);
 
-    let chevronLeft = document.getElementById("buttonLeft");
-    chevronLeft.addEventListener("click", () => {
-      idx--;
+    //Controls display of current image with thumbnails
+    function changeCurrentImage() {
+      currentImage.attributes.src.value = this.attributes.src.value;
+      listOfImages.forEach((image) =>
+        image.classList.remove("current-image-list")
+      );
+      this.classList.add("current-image-list");
+    }    
+    listOfImages.forEach(image => image.addEventListener('click', changeCurrentImage));
 
-      if (idx < 0) {
-        idx = img.length - 1;
-      }
+    //********************************** */
 
-      imgs.style.transform = `translateX(${-idx * 636}px)`;
-    });
 
-    let chevronRight2 = document.getElementById("buttonRight2");
-    chevronRight2.addEventListener("click", () => {
-      idx2++;
-
-      if (idx2 > img2.length - 1) {
-        idx2 = 0;
-      }
-
-      imgs2.style.transform = `translateX(${-idx2 * 260}px)`;
-    });
-
-    let chevronLeft2 = document.getElementById("buttonLeft2");
-    chevronLeft2.addEventListener("click", () => {
-      idx2--;
-
-      if (idx2 < 0) {
-        idx2 = img2.length - 1;
-      }
-
-      imgs2.style.transform = `translateX(${-idx2 * 260}px)`;
-    });
-
-    let chevronRight3 = document.getElementById("buttonRight3");
-    chevronRight3.addEventListener("click", () => {
-      idx3++;
-
-      if (idx3 > img3.length - 1) {
-        idx3 = 0;
-      }
-
-      imgs3.style.transform = `translateX(${-idx3 * 260}px)`;
-    });
-
-    let chevronLeft3 = document.getElementById("buttonLeft3");
-    chevronLeft3.addEventListener("click", () => {
-      idx3--;
-
-      if (idx < 0) {
-        idx3 = img3.length - 1;
-      }
-
-      imgs3.style.transform = `translateX(${-idx3 * 260}px)`;
-    });
-
-    // ----- ------------ Carrossel -------- ----------------//
+    // ----- ------------ Carrossel interested -------- ----------------//
     const fila = document.querySelector(".container-carousel");
     const cars = document.querySelectorAll(".cardPublish");
 
@@ -213,7 +156,10 @@ let Home = {
 
       slides[correctSlideIndex].classList.add("carousel__item--visible");
     });
+
+    // ***********************************
+    
   },
 };
 
-export default Home;
+export default Detalhes;
