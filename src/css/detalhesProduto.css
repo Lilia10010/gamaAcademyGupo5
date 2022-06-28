@@ -114,8 +114,7 @@
     background-color: #fff;
     border-radius: 50%;
     cursor: pointer;
-    top: 25%;
-    transform: translateY(-25%);
+    top: 35%;
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 12%) 0px 1px 10px 0px, rgb(0 0 0 / 14%) 0px 4px 5px 0px;
 }
 
@@ -199,7 +198,7 @@
 .datails-container .specifications .specifications-list {
     display: flex;
     flex-direction: column;
-    margin-bottom: 52px;
+    margin-bottom: 104px;
     
 }
 
@@ -490,3 +489,4 @@
     color: var(--primary);
     text-decoration: underline;
 }
+

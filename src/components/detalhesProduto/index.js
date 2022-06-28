@@ -8,7 +8,15 @@ import Mercedes06 from "@img/cars/mercedes-cabriolet-6.jpg";
 import Mercedes07 from "@img/cars/mercedes-cabriolet-7.jpg";
 import Mercedes08 from "@img/cars/mercedes-cabriolet-8.jpg";
 
+import descricaoVendedor from "../../components/descricaoVendedor";
+import lastPublishDetails from "../../components/lastPublishDetails";
+
+
+
 import "../../css/detalhesProduto.css";
+import "../../css/descricaoVendedor.css";
+import "../../css/lastPublish.css";
+
 
 let detalhesProduto = `
     <main class="wrap-main">
@@ -62,6 +70,8 @@ let detalhesProduto = `
                         <li class="specifications-item">Trnasmissão: <span>Automático</span></li>
                     </ul>
                 </div>
+                <!--Importando pagina feita por: Lucas-->
+                ${descricaoVendedor}
             </div>
             
             <div class="details-info">
@@ -105,6 +115,8 @@ let detalhesProduto = `
                 </div>
             </div>
         </section>
+        <!--Importando carousel feito por: Renato-->
+        ${lastPublishDetails}
     </main>
 `;
 
