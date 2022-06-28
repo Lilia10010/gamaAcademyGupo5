@@ -63,8 +63,9 @@
 }
 /* ---- ----- ----- Container Principal y Flechas ----- ----- ----- */
 .cars-recomendadas {
-  margin-bottom: 70px;
+  margin-bottom: 137px;
 }
+
 .cars-recomendadas .container-principal {
   display: flex;
   align-items: center;
@@ -371,4 +372,19 @@
   background: #ffffff;
   opacity: 0.4;
   border-radius: 40px;
+}
+.details {
+  margin-top: 24px;
+}
+.seeAllArrow {
+  display: flex;
+  justify-content: flex-end;
+  margin: 70px 0 65px 0;
+}
+
+.seeAllArrow a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
