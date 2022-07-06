@@ -25,9 +25,10 @@ let Detalhes = {
     let carouselThumb = document.querySelector(".next-list");
 
     let price = document.querySelector(".price");
+    let moreInfos = document.querySelector(".more-infos");
     let specifications = document.querySelector(".specifications-list");
 
-    const url = "https://e-carros-api.herokuapp.com/adverts?id=0";
+    const url = "https://e-carros-api.herokuapp.com/adverts?id=5";
 
     function getDetails() {
       fetch(url)
@@ -53,7 +54,7 @@ let Detalhes = {
                 ${response.map(
                   (element, index) =>
                     `                
-                      <img src="${element.photos}" alt="${element.model}">
+                      <img src="${element.photos.value}" alt="${element.model}">
                     `
                 )}
                   `;
@@ -63,7 +64,7 @@ let Detalhes = {
                 (element, index) =>
                   `                
                     <li key="${index}">
-                      <img src="${element.photos}" alt="" class="image-of-list current-image-list">
+                      <img src="${element.photos.value}" alt="" class="image-of-list current-image-list">
                     </li>
                   `
               )}
@@ -72,7 +73,16 @@ let Detalhes = {
           price.innerHTML = `
               ${response.map(
                 (element, index) =>
-                  `<h3>${element.price}</h3>
+                  `<h3>R$ ${element.price}</h3>
+                  `
+              )}
+                `;
+
+          moreInfos.innerHTML = `
+              ${response.map(
+                (element, index) =>
+                  `<span><ion-icon class="icon" name="speedometer-outline"></ion-icon>${element.kilometers} Km</span>
+                   <span><ion-icon class="icon" name="location-outline"></ion-icon>${element.location.value}</span>
                   `
               )}
                 `;
@@ -82,9 +92,9 @@ let Detalhes = {
                 (element, index) =>
                   `
                   <li class="specifications-item">Ano: <span>${element.year}</span></li>
-                  <li class="specifications-item">Km: <span>${element.mileage}</span></li>
-                  <li class="specifications-item">Tipo: <span>${element.cartype}</span></li>
-                  <li class="specifications-item">Transmissão: <span>${element.additional[0]}</span></li>
+                  <li class="specifications-item">Km: <span>${element.mileage.value}</span></li>
+                  <li class="specifications-item">Tipo: <span>${element.cartype.value}</span></li>
+                  <li class="specifications-item"><span>${element.additional.value}</span></li>
 
                   `
               )}

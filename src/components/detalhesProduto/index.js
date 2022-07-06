@@ -67,8 +67,7 @@ let detalhesProduto = `
             <div class="details-info">
                 <span class="price"></span>
                 <div class="more-infos">
-                    <span><ion-icon class="icon" name="speedometer-outline"></ion-icon>25.000 Km</span>
-                    <span><ion-icon class="icon" name="location-outline"></ion-icon>São Paulo</span>
+                    
                 </div>
                 <div class="card-seller">
                     <h3 class="type-seller">Vendedor Particular</h3>
