@@ -6,11 +6,11 @@ let filtersLeftCatalog = `
 
       <div class="container-novo-usado">      
         <label>
-          <input type="checkbox">
+          <input type="checkbox" name="new-or-used" value="0" />
           <span>Novo</span>       
         </label>        
         <label>
-          <input type="checkbox">
+          <input type="checkbox" name="new-or-used" value="1" />
           <span>Usado</span>       
         </label>
       </div>
@@ -23,10 +23,11 @@ let filtersLeftCatalog = `
         <span>Localização</span>
         <div class="custom-dropdown">
           <select>
-              <option>Escolha o local</option>
-              <option>local 01</option>
-              <option>local 02</option>
-              <option>local 03</option>
+              <option >Escolha o local</option>
+              <option value="0">São Paulo</option>
+              <option value="1">Rio de Janeiro</option>
+              <option value="2">Minas Gerais</option>
+              <option value="3">Rio Grande do Sul</option>
           </select>
         </div>
       </div>
