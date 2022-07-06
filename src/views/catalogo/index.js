@@ -123,6 +123,33 @@ let Catalogo = {
           )}`;
         });
     }
+
+    /* === pegar novo ou usado === */
+    function getValuesCondition() {
+      var conditionNewOrUsed = document.querySelectorAll(
+        "[name=new-or-used]:checked"
+      );
+      var valuesCondition = [];
+
+      for (var i = 0; i < conditionNewOrUsed.length; i++) {
+        valuesCondition.push(conditionNewOrUsed[i].value);
+      }
+
+      if (valuesCondition.length >= 1) {
+        resultFilter("condition", valuesCondition);
+      } else {
+        getAllCars();
+      }
+    }
+    var checkboxesCondition = document.querySelectorAll("[name=new-or-used]");
+    for (var i = 0; i < checkboxesCondition.length; i++) {
+      checkboxesCondition[i].addEventListener(
+        "click",
+        getValuesCondition,
+        false
+      );
+    }
+
     /* === pegar por tipo da marca === */
     function getValues() {
       var selectedTipoMarca = document.querySelectorAll(
