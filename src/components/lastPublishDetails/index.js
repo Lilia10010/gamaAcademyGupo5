@@ -11,17 +11,11 @@ import Combustivel from "@img/icons/combustivel.png";
 import Cambio from "@img/icons/cambio.png";
 import heart from "@img/icons/svg/heart.svg";
 
-const lastPublish = `
+const lastPublishDetails = `
 
-<div class="cars-recomendadas container">
+<div class="cars-recomendadas details container">
   <div id="menuPublish">
-    <h1 id="tituloPublish">Ultimos publicados</h1>
-    <div id="botoesPublish">
-      <button id="novoPublish">Novo</button>
-      <button id="usadoPublish">Usado</button>
-      <a>Ver todos</a>
-      <img src="${ArrowIcon}"/>
-    </div>
+    <h1 id="tituloPublish">Você pode estar interessado</h1>
   </div>
 
   <div class="container-principal">
@@ -286,9 +280,13 @@ const lastPublish = `
     <img src="${ChevronRightIcon}"/>
   </button>
 </div>
+<div class="seeAllArrow" id="botoesPublish">
+  <a href="#/catalogo" title="Ver todos">Ver todos</a>
+  <img src="${ArrowIcon}"/>
+</div>
 <div class="container-titulo-controles">
   <div class="indicadores"></div>
 </div>
 `;
 
-export default lastPublish;
+export default lastPublishDetails;

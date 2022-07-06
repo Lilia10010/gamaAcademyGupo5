@@ -6,6 +6,8 @@ import banner from "../../components/banner";
 import menuSelect from "../../components/menuSelect";
 import Offers from "../../components/offers";
 import lastPublish from "../../components/lastPublish";
+import carrosselLoja from "../../components/carrosselLoja";
+
 import downloadApp from "../../components/downloadApp";
 import features from "../../components/features";
 import typesCar from "../../components/typesCar";
@@ -30,13 +32,13 @@ let Home = {
           ${brand}
           ${features}
           ${lastPublish}
+          ${carrosselLoja}
           ${downloadApp}
           ${UltimasNovidades}
         </div>
+        </div>
         ${footer}
-      </div>
     `;
-
     return view;
   },
 
@@ -113,30 +115,88 @@ let Home = {
 
       imgs3.style.transform = `translateX(${-idx3 * 260}px)`;
     });
-    /*  },
 
-  after_render: async () => { */
-    const slides = document.querySelectorAll('[data-js="carousel__item"]');
-    const nextButton = document.querySelector(
-      '[data-js="carousel__button--next"]'
-    );
-    const prevButton = document.querySelector(
-      '[data-js="carousel__button--prev"]'
-    );
+    // ----- ------------ Carrossel -------- ----------------//
+    const fila = document.querySelector(".container-carousel");
+    const cars = document.querySelectorAll(".cardPublish");
 
-    const letSlideIndex = slides.length - 1;
+    const setaEsquerda = document.getElementById("seta-esquerda");
+    const setaDireita = document.getElementById("seta-direita");
+
+    // ? ----- ----- Evento Listener para a flecha direita. ----- -----
+    setaDireita.addEventListener("click", () => {
+      fila.scrollLeft += fila.offsetWidth;
+
+      const indicadorActivo = document.querySelector(".indicadores .activo");
+      if (indicadorActivo.nextSibling) {
+        indicadorActivo.nextSibling.classList.add("activo");
+        indicadorActivo.classList.remove("activo");
+      }
+    });
+
+    // ? ----- ----- Evento Listener para a flecha esquerda. ----- -----
+    setaEsquerda.addEventListener("click", () => {
+      fila.scrollLeft -= fila.offsetWidth;
+
+      const indicadorActivo = document.querySelector(".indicadores .activo");
+      if (indicadorActivo.previousSibling) {
+        indicadorActivo.previousSibling.classList.add("activo");
+        indicadorActivo.classList.remove("activo");
+      }
+    });
+
+    // ? ----- ----- Paginação----- -----
+    const numeroPaginas = Math.ceil(cars.length / 3);
+    for (let i = 0; i < numeroPaginas; i++) {
+      const indicador = document.createElement("button");
+
+      if (i === 0) {
+        indicador.classList.add("activo");
+      }
+
+      document.querySelector(".indicadores").appendChild(indicador);
+      indicador.addEventListener("click", (e) => {
+        fila.scrollLeft = i * fila.offsetWidth;
+
+        document
+          .querySelector(".indicadores .activo")
+          .classList.remove("activo");
+        e.target.classList.add("activo");
+      });
+    }
+
+    // ? ----- ----- Hover ----- -----
+    cars.forEach((car) => {
+      car.addEventListener("mouseenter", (e) => {
+        const elemento = e.currentTarget;
+        setTimeout(() => {
+          cars.forEach((car) => car.classList.remove("hover"));
+          elemento.classList.add("hover");
+        }, 300);
+      });
+    });
+
+    fila.addEventListener("mouseleave", () => {
+      cars.forEach((car) => car.classList.remove("hover"));
+    });
+
+    const slides = document.querySelectorAll('[data-js="carousel__item"');
+    const nextButton = document.querySelector(".carousel__button--next");
+    const prevButton = document.querySelector(".carousel__button--prev");
+
+    const lastSlideIndex = slides.length - 1;
     let currentSlideIndex = 0;
 
-    const manipulateSlidesClasses = (correcSlideIndex) => {
+    const manipulateSlidesClasses = (correctSlideIndex) => {
       slides.forEach((slide) =>
         slide.classList.remove("carousel__item--visible")
       );
-      slides[correcSlideIndex].classList.add("carousel__item--visible");
+      slides[correctSlideIndex].classList.add("carousel__item--visible");
     };
 
     nextButton.addEventListener("click", () => {
       const correctSlideIndex =
-        currentSlideIndex === letSlideIndex
+        currentSlideIndex === lastSlideIndex
           ? (currentSlideIndex = 0)
           : ++currentSlideIndex;
 
@@ -146,10 +206,12 @@ let Home = {
     prevButton.addEventListener("click", () => {
       const correctSlideIndex =
         currentSlideIndex === 0
-          ? (currentSlideIndex = letSlideIndex)
+          ? (currentSlideIndex = lastSlideIndex)
           : --currentSlideIndex;
 
       manipulateSlidesClasses(correctSlideIndex);
+
+      slides[correctSlideIndex].classList.add("carousel__item--visible");
     });
 
     //Consuming API Brands
