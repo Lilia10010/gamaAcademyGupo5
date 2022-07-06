@@ -6,11 +6,11 @@ let filtersLeftCatalog = `
 
       <div class="container-novo-usado">      
         <label>
-          <input type="checkbox" name="new-or-used" value="0" />
+          <input type="checkbox" name="new-or-used" value="1" />
           <span>Novo</span>       
         </label>        
         <label>
-          <input type="checkbox" name="new-or-used" value="1" />
+          <input type="checkbox" name="new-or-used" value="2" />
           <span>Usado</span>       
         </label>
       </div>
