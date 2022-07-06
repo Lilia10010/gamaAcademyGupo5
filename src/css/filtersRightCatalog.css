@@ -58,7 +58,7 @@
 .card-top {
   position: relative;
   width: 100%;
-  max-width: 471px;
+  width: 471px;
   max-height: 241px;
   height: 100%;
 }
@@ -75,6 +75,16 @@
   left: 20px;
   color: #fff;
   background: #3c76f2;
+  border-radius: 6px;
+  padding: 1px 10px 2px;
+}
+
+.card-container .card-top .tag-certifield {
+  background: #07c98b;
+  position: absolute;
+  top: 47px;
+  left: 20px;
+  color: #fff;
   border-radius: 6px;
   padding: 1px 10px 2px;
 }
@@ -168,7 +178,15 @@
   border-radius: 8px;
   text-align: center;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-secondary img {
+  margin-bottom: 3px;
 }
 
 @media (max-width: 768px) {
