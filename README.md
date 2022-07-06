@@ -19,7 +19,7 @@ A empresa fictícia FINDER, vai lançar um portal de veículos!
 
 Esse projeto é baseado em um e-commerce de vendas de carros online, aqui você vai encontrar carros de todos os tipos e gostos, novos e usados.
 
-Baixe o repositório ou acesse os links abaixo:
+Baixe o repositório ou acesse os links abaixo: <br />
 [Home](https://findergrupo5.netlify.app) |
 [catalogo](https://findergrupo5.netlify.app/#/catalogo) |
 [detalhes](https://findergrupo5.netlify.app/#/detalhes)
