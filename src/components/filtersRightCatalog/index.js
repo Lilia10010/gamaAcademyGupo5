@@ -1,5 +1,4 @@
 import "../../css/filtersRightCatalog.css";
-import cardGroup from "./cardGroup";
 
 import ordenarIcon from "../../img/icons/svg/ordenar-icon.svg";
 import carIcon from "../../img/icons/svg/car.svg";
