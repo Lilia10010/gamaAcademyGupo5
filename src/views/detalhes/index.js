@@ -1,6 +1,7 @@
 import nav from "../../components/nav";
 import footer from "../../components/footer";
 import detalhesProduto from "../../components/detalhesProduto";
+import descricaoVendedor from "../../components/descricaoVendedor";
 
 let Detalhes = {
   render: async () => {
@@ -17,28 +18,106 @@ let Detalhes = {
   },
 
   after_render: async () => {
+    let titleBreadcrumb = document.querySelector(".titleCurrentPage");
+    let titleCarAndVersion = document.querySelector(".title");
 
-     // Carousel of images Seller
+    let carouselCurrentImage = document.querySelector(".current-image");
+    let carouselThumb = document.querySelector(".next-list");
+
+    let price = document.querySelector(".price");
+    let specifications = document.querySelector(".specifications-list");
+
+    const url = "https://e-carros-api.herokuapp.com/adverts?id=0";
+
+    function getDetails() {
+      fetch(url)
+        .then((res) => res.json())
+        .then((response) => {
+          titleBreadcrumb.innerHTML = `
+              ${response.map(
+                (element) =>
+                  `<span aria-current="page">${element.model} ${element.version}</span> 
+                  `
+              )}
+                `;
+
+          titleCarAndVersion.innerHTML = `
+              ${response.map(
+                (element) =>
+                  `<h2>${element.model} ${element.version}</h2>  
+                  `
+              )}
+                `;
+
+          carouselCurrentImage.innerHTML = `
+                ${response.map(
+                  (element, index) =>
+                    `                
+                      <img src="${element.photos}" alt="${element.model}">
+                    `
+                )}
+                  `;
+
+          carouselThumb.innerHTML = `
+              ${response.map(
+                (element, index) =>
+                  `                
+                    <li key="${index}">
+                      <img src="${element.photos}" alt="" class="image-of-list current-image-list">
+                    </li>
+                  `
+              )}
+                `;
+
+          price.innerHTML = `
+              ${response.map(
+                (element, index) =>
+                  `<h3>${element.price}</h3>
+                  `
+              )}
+                `;
+
+          specifications.innerHTML = `
+              ${response.map(
+                (element, index) =>
+                  `
+                  <li class="specifications-item">Ano: <span>${element.year}</span></li>
+                  <li class="specifications-item">Km: <span>${element.mileage}</span></li>
+                  <li class="specifications-item">Tipo: <span>${element.cartype}</span></li>
+                  <li class="specifications-item">Transmissão: <span>${element.additional[0]}</span></li>
+
+                  `
+              )}
+                `;
+        });
+    }
+    getDetails();
+
+    // Carousel of images Seller
     const carouselContainer = document.querySelector(".carousel-container");
-    const listImageArea = carouselContainer.querySelector('.next-list');
-    const listOfImages = listImageArea.querySelectorAll('img');
+    const listImageArea = carouselContainer.querySelector(".next-list");
+    const listOfImages = listImageArea.querySelectorAll("img");
     const currentImage = carouselContainer.querySelector(".current-image");
     const arrowPrev = carouselContainer.querySelector(".arrow-prev");
     const arrowNext = carouselContainer.querySelector(".arrow-next");
 
-    function goToNextSlide() {      
+    function goToNextSlide() {
       let current = listImageArea.querySelector(".current-image-list");
-      current.parentElement.nextElementSibling.children[0].classList.add("current-image-list");
+      current.parentElement.nextElementSibling.children[0].classList.add(
+        "current-image-list"
+      );
       current.classList.remove("current-image-list");
       current = listImageArea.querySelector(".current-image-list");
-      listImageArea.scrollLeft  = current.offsetLeft ;
+      listImageArea.scrollLeft = current.offsetLeft;
       currentImage.attributes.src.value = current.attributes.src.value;
     }
     arrowNext.addEventListener("click", goToNextSlide);
 
     function goToPrevSlide() {
       let current = listImageArea.querySelector(".current-image-list");
-      current.parentElement.previousElementSibling.children[0].classList.add("current-image-list");
+      current.parentElement.previousElementSibling.children[0].classList.add(
+        "current-image-list"
+      );
       current.classList.remove("current-image-list");
       current = listImageArea.querySelector(".current-image-list");
       listImageArea.scrollLeft = current.offsetLeft;
@@ -53,11 +132,12 @@ let Detalhes = {
         image.classList.remove("current-image-list")
       );
       this.classList.add("current-image-list");
-    }    
-    listOfImages.forEach(image => image.addEventListener('click', changeCurrentImage));
+    }
+    listOfImages.forEach((image) =>
+      image.addEventListener("mouseover", changeCurrentImage)
+    );
 
     //********************************** */
-
 
     // ----- ------------ Carrossel interested -------- ----------------//
     const fila = document.querySelector(".container-carousel");
@@ -158,7 +238,6 @@ let Detalhes = {
     });
 
     // ***********************************
-    
   },
 };
 
