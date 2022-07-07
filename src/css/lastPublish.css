@@ -332,7 +332,7 @@
 #containerCombustivel {
   display: flex;
   flex-direction: column;
-  width: 117px;
+  width: 112px;
   height: 62px;
   background: var(--gray-900);
   opacity: 0.5;
@@ -374,7 +374,7 @@
   border-radius: 40px;
 }
 .details {
-  margin-top: 24px;
+  margin-top: 9px;
 }
 .seeAllArrow {
   display: flex;
