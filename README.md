@@ -8,6 +8,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
 - JavaScript
 - Webpack
+- Hotjar
+- Facebook Pixel
 
 ## Bibliotecas
 
