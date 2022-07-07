@@ -25,6 +25,9 @@
   margin-left: 10px;
   margin-right: 50px;
 }
+.link-logo {
+  cursor: pointer;
+}
 .menu {
   display: flex;
   margin-right: 88px;
@@ -36,7 +39,7 @@
   padding-right: 32px;
   list-style-type: none;
 }
-a {
+.menu a {
   text-decoration: none;
   font-family: "Noto Sans";
   font-style: normal;
@@ -46,6 +49,13 @@ a {
   color: #ffffff;
   opacity: 0.7;
   cursor: pointer;
+  transition: 0.3s;
+}
+.menu li {
+  cursor: pointer;
+}
+.menu li:hover a {
+  color: #fd5631;
 }
 #botao-entrar {
   font-family: "Noto Sans";

@@ -4,6 +4,7 @@ import filtersLeftCatalog from "../../components/filtersLeftCatalog";
 import filtersRightCatalog from "../../components/filtersRightCatalog";
 
 import locationIcon from "../../img/icons/local.png";
+import loadingGif from "../../img/imagens-e-gifs-de-loading-4.gif";
 import dashboarIcon from "../../img/icons/svg/dashboard.svg";
 import gearboxIcon from "../../img/icons/svg/gearbox.svg";
 import petrolIcon from "../../img/icons/svg/petrol.svg";
@@ -34,11 +35,17 @@ let Catalogo = {
       ".classificacao-carros"
     );
 
+    let totalResults = document.querySelector(".total-results");
+
+    resultAllCars.innerHTML = `<img src=${loadingGif} />`;
+
     /* ===  pegar todos os adverts === */
     function getAllCars() {
+      resultAllCars.innerHTML = `<img src=${loadingGif} />`;
       fetch("https://e-carros-api.herokuapp.com/adverts")
         .then((res) => res.json())
         .then((response) => {
+          totalResults.innerHTML = response.length + " resultados";
           for (const value of classificationCarType) {
             value.innerHTML = "Carros";
           }
@@ -105,12 +112,13 @@ let Catalogo = {
     getAllCars();
 
     function resultFilter(params, value) {
+      resultAllCars.innerHTML = `<img src=${loadingGif} />`;
       fetch(
         `https://monkfish-app-2xvm7.ondigitalocean.app/adverts?${params}=${value}`
       )
         .then((res) => res.json())
         .then((response) => {
-          console.log("response", response.length);
+          totalResults.innerHTML = response.results.length + " resultados";
 
           if (params === "condition") {
             if (value[0] === "1") {
@@ -129,6 +137,7 @@ let Catalogo = {
           resultAllCars.innerHTML = `${response.results.map(
             (elemento, index) => `
             <div key="${index}" class="card-container">
+             <a href="/#/detalhes?${elemento.id}">
               <div class="card-top">
             <img src="${elemento.photos.value}" alt="carro verde" />
             ${
@@ -174,6 +183,7 @@ let Catalogo = {
             </div>
           </div>
         </div>
+        </a>
             </div> 
         `
           )}`;

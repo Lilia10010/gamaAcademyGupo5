@@ -16,10 +16,12 @@ let footer = `
 <footer>
 <div>
 <div class="finder">
-    <div id="circulo">
-      <img id="img-logo" src="${Logo}"/>
-      <img id="finder" src="${Finder}"/>
-    </div>
+    <a href="/">
+      <div id="circulo">
+          <img id="img-logo" src="${Logo}"/>
+          <img id="finder" src="${Finder}"/>
+          </div>
+    </a>
   <div class="localizacao">
     <div><img src="${Pais}"/> pt-BR <img src="${Seta}"/></div>
     <div><img src="${Local}"/> São Paulo <img src="${Seta}"/></div>

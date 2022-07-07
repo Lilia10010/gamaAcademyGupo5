@@ -63,7 +63,9 @@ html {
   border-radius: 10px;
   background: var(--primary);
 }
-
+a {
+  text-decoration: none;
+}
 ol,
 ul {
   list-style: none;

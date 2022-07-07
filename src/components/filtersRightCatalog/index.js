@@ -18,7 +18,7 @@ let filtersRightCatalog = `
         <h3> <span class="classificacao-carros"></span></h3>
         <div class="continer-header-catalog-right">
           <img src="${carIcon}" alt="arrow comparar" />       
-          <div>249 offers</div>
+          <div class="total-results"></div>
         </div>
       </div>
 
