@@ -28,12 +28,15 @@ let Detalhes = {
     let moreInfos = document.querySelector(".more-infos");
     let specifications = document.querySelector(".specifications-list");
 
-    const url = "https://e-carros-api.herokuapp.com/adverts?id=5";
+    let id = window.localStorage.getItem("idData");
+
+    const url = `https://e-carros-api.herokuapp.com/adverts?id=${id}`;
 
     function getDetails() {
       fetch(url)
         .then((res) => res.json())
         .then((response) => {
+          console.log(response);
           titleBreadcrumb.innerHTML = `
               ${response.map(
                 (element) =>
@@ -81,8 +84,12 @@ let Detalhes = {
           moreInfos.innerHTML = `
               ${response.map(
                 (element, index) =>
-                  `<span><ion-icon class="icon" name="speedometer-outline"></ion-icon>${element.kilometers} Km</span>
-                   <span><ion-icon class="icon" name="location-outline"></ion-icon>${element.location.value}</span>
+                  `<span><ion-icon class="icon" name="speedometer-outline"></ion-icon>${
+                    element.kilometers ? element.kilometers : ""
+                  } Km</span>
+                   <span><ion-icon class="icon" name="location-outline"></ion-icon>${
+                     element.location?.value
+                   }</span>
                   `
               )}
                 `;
@@ -91,10 +98,18 @@ let Detalhes = {
               ${response.map(
                 (element, index) =>
                   `
-                  <li class="specifications-item">Ano: <span>${element.year}</span></li>
-                  <li class="specifications-item">Km: <span>${element.mileage.value}</span></li>
-                  <li class="specifications-item">Tipo: <span>${element.cartype.value}</span></li>
-                  <li class="specifications-item"><span>${element.additional.value}</span></li>
+                  <li class="specifications-item">Ano: <span>${
+                    element.year ? element.year : ""
+                  }</span></li>
+                  <li class="specifications-item">Km: <span>${
+                    element.mileage ? element.mileage.value : ""
+                  }</span></li>
+                  <li class="specifications-item">Tipo: <span>${
+                    element.cartype.value ? element.cartype.value : ""
+                  }</span></li>
+                  <li class="specifications-item"><span>${
+                    element.additional?.value
+                  }</span></li>
 
                   `
               )}

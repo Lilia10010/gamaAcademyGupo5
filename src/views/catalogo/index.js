@@ -30,70 +30,73 @@ let Catalogo = {
   after_render: async () => {
     let resultAllCars = document.querySelector(".wrapper-catalog-card");
 
-    /*     function getApi() {
-      fetch("https://monkfish-app-2xvm7.ondigitalocean.app/adverts")
-        .then((res) => res.json())
-        .then((response) => {
-          console.log("response >>>", response.results);
-        });
-    }
+    let classificationCarType = document.querySelectorAll(
+      ".classificacao-carros"
+    );
 
-    getApi(); */
     /* ===  pegar todos os adverts === */
     function getAllCars() {
       fetch("https://e-carros-api.herokuapp.com/adverts")
         .then((res) => res.json())
         .then((response) => {
+          for (const value of classificationCarType) {
+            value.innerHTML = "Carros";
+          }
           resultAllCars.innerHTML = `${response
             .map(
               (elemento, index) => `
-          <div key="${index}" class="card-container">
-          <div class="card-top">
-            <img src="${elemento.photos.value}" alt="carro verde" />
-            ${
-              elemento.condition
-                ? `<div class="tag">${elemento.condition.value}</div>`
-                : ""
-            }
-             ${
-               elemento.certifield === true
-                 ? `<div class="tag-certifield">Certificado</div>`
-                 : ""
-             }
-          </div>
-          <div class="card-bottom">
-            <div class="ano">
-              <span>${elemento.year}</span>
-              <div class="container-checkbox-tipo">
-                <input type="checkbox" id="compare" value="compareid" name="compare" />
-                <label for="compare" class="checkbox">Compare</label>
-            </div>
-          </div>
-            <div class="info-primary">
-              <p> ${elemento.model} <p>
-              <span>$ ${elemento.price} <span>
-                <div> <img src="${locationIcon}" /> ${
+              
+              <div  key="${index}" class="card-container">
+              <a href="/#/detalhes?${elemento.id}">
+                <div class="card-top">
+                  <img src="${elemento.photos.value}" alt="carro verde" />
+                  ${
+                    elemento.condition
+                      ? `<div class="tag">${elemento.condition.value}</div>`
+                      : ""
+                  }
+                  ${
+                    elemento.certifield === true
+                      ? `<div class="tag-certifield">Certificado</div>`
+                      : ""
+                  }
+                </div>
+                <div class="card-bottom">
+                  <div class="ano">
+                    <span>${elemento.year}</span>
+                    <div class="container-checkbox-tipo">
+                      <input type="checkbox" id="compare" value="compareid" name="compare" />
+                      <label for="compare" class="checkbox">Compare</label>
+                  </div>
+                </div>
+                  <div class="info-primary">
+                    <p> ${elemento.model} <p>
+                    <span>$ ${elemento.price} <span>
+                      <div> <img src="${locationIcon}" /> ${
                 elemento.location ? elemento.location.value : "desconhecido"
               }</div>
-          </div>
-          <div class="info-secondary"> 
-            <div>
-              <img src="${dashboarIcon}" alt="carro verde" />
-              <div>${elemento.kilometers}</div>        
-            </div>
-            <div>
-              <img src="${gearboxIcon}" alt="carro verde" />
-              <div>${
-                elemento.additional ? elemento.additional.value : " - "
-              }</div>        
-            </div>
-            <div>
-              <img src="${petrolIcon}" alt="carro verde" />
-              <div>${elemento.fuel ? elemento.fuel.value : " -"}</div>        
-            </div>
-          </div>
-        </div>
-        </div> 
+                </div>
+                <div class="info-secondary"> 
+                  <div>
+                    <img src="${dashboarIcon}" alt="carro verde" />
+                    <div>${elemento.kilometers}</div>        
+                  </div>
+                  <div>
+                    <img src="${gearboxIcon}" alt="carro verde" />
+                    <div>${
+                      elemento.additional ? elemento.additional.value : " - "
+                    }</div>        
+                  </div>
+                  <div>
+                    <img src="${petrolIcon}" alt="carro verde" />
+                    <div>${
+                      elemento.fuel ? elemento.fuel.value : " -"
+                    }</div>        
+                  </div>
+                </div>
+              </div>
+              </a>
+              </div> 
         `
             )
             .join("")}`;
@@ -107,7 +110,22 @@ let Catalogo = {
       )
         .then((res) => res.json())
         .then((response) => {
-          console.log(">>>", response);
+          console.log("response", response.length);
+
+          if (params === "condition") {
+            if (value[0] === "1") {
+              for (const value of classificationCarType) {
+                value.innerHTML = "Novo";
+              }
+            } else if (value[0] === "2") {
+              for (const value of classificationCarType) {
+                value.innerHTML = "Usado";
+              }
+            } else {
+              classificationCarType.innerHTML = "Carros";
+            }
+          }
+
           resultAllCars.innerHTML = `${response.results.map(
             (elemento, index) => `
             <div key="${index}" class="card-container">
@@ -187,6 +205,17 @@ let Catalogo = {
         false
       );
     }
+
+    /* === pegar por localização === */
+    document
+      .getElementById("select-localizacao")
+      .addEventListener("change", function () {
+        if (this.value != "all") {
+          resultFilter("location", this.value);
+        } else {
+          getAllCars();
+        }
+      });
 
     /* === pegar por tipo da marca === */
     function getValues() {

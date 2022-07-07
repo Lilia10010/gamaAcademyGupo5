@@ -7,8 +7,8 @@ import Detalhes from "./views/detalhes";
 
 let routes = {
   "/": Home,
-  '/catalogo' : Catalogo,
-  '/detalhes' : Detalhes
+  "/catalogo": Catalogo,
+  "/detalhes": Detalhes,
 };
 
 const router = async () => {
@@ -25,7 +25,19 @@ const router = async () => {
   await page.after_render();
 };
 
-
 window.addEventListener("hashchange", router);
+
+window.addEventListener("hashchange", () => {
+  let UrlRoute = window.location.hash;
+  let routeTest = UrlRoute.split("?");
+  if (routeTest[0] === "#/detalhes") {
+    localStorage.setItem("idData", routeTest[1]);
+    return window.location.replace("#/detalhes");
+  }
+  if (routeTest[0] === "#/catalogo") {
+    localStorage.setItem("idData", routeTest[1]);
+    window.location.replace("#/catalogo");
+  }
+});
 
 window.addEventListener("load", router);
