@@ -11,13 +11,14 @@ import barraVertical from "../../img/icons/barraVerticalMenu.png";
 let filtersRightCatalog = `
   <section class="section-continer-header-catalog">
     <div class="continer-header-catalog">
-      <div><span class="opacity">Home ></span> <span>Carros usados</span></div>
+      <div><span class="opacity">Home ></span> <span class="classificacao-carros"></span></div>
+     
 
       <div class="title">
-        <h3>Carros usados</h3>
+        <h3> <span class="classificacao-carros"></span></h3>
         <div class="continer-header-catalog-right">
           <img src="${carIcon}" alt="arrow comparar" />       
-          <div>249 offers</div>
+          <div class="total-results"></div>
         </div>
       </div>
 

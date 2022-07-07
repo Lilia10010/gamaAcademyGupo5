@@ -22,12 +22,14 @@ let filtersLeftCatalog = `
       <div class="title-filtro select-localizacao">
         <span>Localização</span>
         <div class="custom-dropdown">
-          <select>
-              <option >Escolha o local</option>
-              <option value="0">São Paulo</option>
-              <option value="1">Rio de Janeiro</option>
-              <option value="2">Minas Gerais</option>
-              <option value="3">Rio Grande do Sul</option>
+          <select id="select-localizacao">
+              <option value="all">Escolha o local</option>
+              <option value="1">São Paulo</option>
+              <option value="2">Rio de Janeiro</option>
+              <option value="3">Minas Gerais</option>
+              <option value="4">Rio Grande do Sul</option>
+              <option value="5">Ceará</option>
+              <option value="6">Bahia</option>
           </select>
         </div>
       </div>
@@ -35,23 +37,23 @@ let filtersLeftCatalog = `
       <div class="title-filtro checkbox-tipo">
         <span>Tipo</span>
         <div class="container-checkbox-tipo">
-          <input class="tipo-marca" type="checkbox" id="coupe-tipo" value="Coupe" name="tipo-marca" />
+          <input class="tipo-marca" type="checkbox" id="coupe-tipo" value="1" name="tipo-marca" />
           <label for="coupe-tipo" class="checkbox">Coupe</label>
 
-          <input class="tipo-marca" type="checkbox" id="suv-tipo" value="suv" name="tipo-marca" />
-          <label for="suv-tipo" class="checkbox">SUV</label>
+          <input class="tipo-marca" type="checkbox" id="sedan-tipo" value="2" name="tipo-marca" />
+          <label for="sedan-tipo" class="checkbox">Sedã</label>
 
-          <input class="tipo-marca" type="checkbox" id="wagon-tipo" value="wagon" name="tipo-marca" />
-          <label for="wagon-tipo" class="checkbox">Wagon</label>
-
-          <input class="tipo-marca" type="checkbox" id="crossover-tipo" value="crossover" name="tipo-marca" />
-          <label for="crossover-tipo" class="checkbox">Crossover</label>
-
-          <input class="tipo-marca" type="checkbox" id="hatback-tipo" value="Hatback" name="tipo-marca" />
+          <input class="tipo-marca" type="checkbox" id="hatback-tipo" value="3" name="tipo-marca" />
           <label for="hatback-tipo" class="checkbox">Hatback</label>
 
-          <input class="tipo-marca" type="checkbox" id="pickup-tipo" value="pickup" name="tipo-marca" />
-          <label for="pickup-tipo" class="checkbox">Pickup</label>
+          <input class="tipo-marca" type="checkbox" id="picup-tipo" value="4" name="tipo-marca" />
+          <label for="picup-tipo" class="checkbox">Picup</label>
+
+          <input class="tipo-marca" type="checkbox" id="utilitario-tipo" value="5" name="tipo-marca" />
+          <label for="utilitario-tipo" class="checkbox">Utilitário</label>
+
+          <input class="tipo-marca" type="checkbox" id="suv-tipo" value="6" name="tipo-marca" />
+          <label for="suv-tipo" class="checkbox">SUV</label>
 
           <input class="tipo-marca" type="checkbox" id="1other-tipo" value="1other" name="tipo-marca" />
           <label for="1other-tipo" class="checkbox">1 - other</label>
@@ -69,15 +71,15 @@ let filtersLeftCatalog = `
         <div class="custom-dropdown">
           <select id="select-marca">
               <option value="all">Marca</option>
-              <option value="0">Renault</option>
-              <option value="1">Honda</option>
-              <option value="2">Infiniti</option>
-              <option value="3">Mercedez Benz</option>
-              <option value="4">Lexus</option>
-              <option value="5">Mitsubishi</option>
-              <option value="6">Mazda</option>
-              <option value="7">Hyundai</option>
-              <option value="8">Audi</option>
+              <option value="3">Renault</option>
+              <option value="4">Honda</option>
+              <option value="5">Infiniti</option>
+              <option value="6">Lexus</option>
+              <option value="7">Mitsubishi</option>
+              <option value="8">Mazda</option>
+              <option value="9">Hyundai</option>
+              <option value="10">Audi</option>
+              <option value="11">Mercedez Benz</option>
           </select>
 
            <select id="select-modelo">

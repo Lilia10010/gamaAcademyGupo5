@@ -176,6 +176,7 @@ form {
   border-radius: 100%;
   background-color: #fd5631;
   display: flex;
+  cursor: pointer;
 }
 
 #circulo h2 {
